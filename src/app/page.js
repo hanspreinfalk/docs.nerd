@@ -44,9 +44,7 @@ function DynamicContent() {
       return (
         <>
           <WelcomePage />
-          <div className="-mt-0">
-            <FeaturesGrid />
-          </div>
+
         </>
       )
   }

@@ -86,7 +86,7 @@ export function WelcomePage() {
   return (
     <>
       <WelcomeTableOfContents sections={sections} />
-      <div className="flex flex-col items-start justify-start min-h-[80vh] px-4 lg:px-6">
+      <div className="flex flex-col items-start justify-start min-h-[40vh] px-4 lg:px-6">
         <div id="bienvenido" className="text-center space-y-3 px-4 lg:px-6">
           <h1 className="text-xl font-bold tracking-tight lg:text-3xl text-left">
             Bienvenido
@@ -111,14 +111,7 @@ export function WelcomePage() {
           </p>
         </div>
       </div>
-    </>
-  )
-}
-
-
-export function FeaturesGrid() {
-  return (
-    <div id="caracteristicas" className="w-full max-w-3xl px-4 lg:px-6 -mt-10 lg:mt-0 lg:ml-4">
+      <div id="caracteristicas" className="w-full max-w-3xl px-4 lg:px-6 -mt-0 lg:mt-0 lg:ml-4">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 lg:px-2">
         {/* Card 1 */}
         <div className="bg-white rounded-lg shadow-md p-6 border h-[180px] flex flex-col">
@@ -238,6 +231,9 @@ export function FeaturesGrid() {
         </div>
       </div>
     </div>
+
+    </>
+    
   )
 }
 
