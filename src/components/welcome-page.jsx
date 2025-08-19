@@ -5,7 +5,7 @@ export function WelcomePage() {
         <h1 className="text-xl font-bold tracking-tight lg:text-3xl text-left">
           Bienvenido
         </h1>
-        <p className="text-base text-black lg:text-lg">
+        <p className="text-base text-black lg:text-lg text-left">
           Aprende sobre Nerd y empieza a crear
         </p>
       </div>
@@ -31,7 +31,7 @@ export function WelcomePage() {
 
 export function FeaturesGrid() {
   return (
-    <div className="w-full max-w-3xl px-4 lg:px-6 -mt-60 lg:ml-4">
+    <div className="w-full max-w-3xl px-4 lg:px-6 mt-8 lg:ml-4">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 lg:px-2">
         {/* Card 1 */}
         <div className="bg-white rounded-lg shadow-md p-6 border">
