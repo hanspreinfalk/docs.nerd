@@ -98,7 +98,7 @@ export function WelcomePage() {
         <div id="video-introduccion" className="w-full max-w-3xl mt-6 px-4 lg:px-6">
           <iframe
             className="w-full aspect-video rounded-lg shadow-lg"
-            src="https://www.youtube.com/embed/4y_Qo33FTUc"
+            src="https://www.youtube.com/embed/fVEfew82ueA"
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
