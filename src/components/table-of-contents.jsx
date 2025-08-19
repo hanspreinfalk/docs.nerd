@@ -53,8 +53,8 @@ export function TableOfContents({ sections }) {
   }
 
   return (
-    <div className="hidden xl:block fixed top-1/2 right-8 transform -translate-y-1/2 z-30">
-      <div className="bg-white border border-gray-200 rounded-lg shadow-sm p-4 max-w-xs">
+    <div className="hidden xl:block fixed top-[7.5rem] right-8 z-30">
+      <div className="bg-white p-4 max-w-xs">
         <h3 className="text-sm font-semibold text-gray-900 mb-3">
           En esta página
         </h3>

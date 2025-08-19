@@ -1,7 +1,96 @@
+import { useState, useEffect } from 'react'
+
+function PlansTableOfContents({ sections }) {
+  const [activeSection, setActiveSection] = useState('')
+
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: '-20% 0px -60% 0px',
+      threshold: 0
+    }
+
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id)
+        }
+      })
+    }
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions)
+
+    sections.forEach((section) => {
+      const element = document.getElementById(section.id)
+      if (element) {
+        observer.observe(element)
+      }
+    })
+
+    return () => {
+      sections.forEach((section) => {
+        const element = document.getElementById(section.id)
+        if (element) {
+          observer.unobserve(element)
+        }
+      })
+    }
+  }, [sections])
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      const offset = 100
+      const elementPosition = element.offsetTop - offset
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      })
+    }
+  }
+
+  return (
+    <div className="hidden xl:block fixed top-[7.5rem] right-8 z-30">
+      <div className="bg-white p-4 max-w-xs">
+        <h3 className="text-sm font-semibold text-gray-900 mb-3">
+          En esta página
+        </h3>
+        <nav className="space-y-1">
+          {sections.map((section) => (
+            <button
+              key={section.id}
+              onClick={() => scrollToSection(section.id)}
+              className={`block text-left w-full px-2 py-1 rounded text-sm transition-colors hover:bg-gray-100 ${
+                activeSection === section.id
+                  ? 'text-blue-600 bg-blue-50 font-medium border-l-2 border-blue-600 pl-3'
+                  : 'text-gray-600 hover:text-gray-900'
+              }`}
+            >
+              {section.title}
+            </button>
+          ))}
+        </nav>
+      </div>
+    </div>
+  )
+}
+
 export function PlansTokensPage() {
-    return (
+  const sections = [
+    { id: 'introduccion', title: 'Planes y Tokens' },
+    { id: 'que-es-nerd', title: '¿Qué es Nerd.lat?' },
+    { id: 'comparacion-planes', title: 'Comparación de características' },
+    { id: 'planes-disponibles', title: 'Planes de Pago Disponibles' },
+    { id: 'visualizacion-creditos', title: 'Visualización de Créditos' },
+    { id: 'uso-creditos', title: 'Uso de Créditos' },
+    { id: 'acumulacion-creditos', title: 'Acumulación de Créditos' }
+  ]
+
+  return (
+    <>
+      <PlansTableOfContents sections={sections} />
       <div className="flex flex-col items-start justify-start min-h-[80vh] px-4 lg:px-6">
-        <div className="text-center space-y-3 px-4 lg:px-6">
+        <div id="introduccion" className="text-center space-y-3 px-4 lg:px-6">
           <h1 className="text-xl font-bold tracking-tight lg:text-3xl text-left">
             Planes y Tokens
           </h1>
@@ -12,7 +101,7 @@ export function PlansTokensPage() {
         
         <div className="w-full max-w-3xl mt-6 px-4 lg:px-6 space-y-8">
           {/* Introducción */}
-          <div className="space-y-4">
+          <div id="que-es-nerd" className="space-y-4">
             <h2 className="text-2xl font-semibold">¿Qué es Nerd.lat?</h2>
             <p className="text-base text-black lg:text-lg">
               Nerd.lat es un servicio basado en suscripción con un plan gratuito y varios planes de pago. 
@@ -22,7 +111,7 @@ export function PlansTokensPage() {
           </div>
 
           {/* Comparación de características */}
-          <div className="space-y-4">
+          <div id="comparacion-planes" className="space-y-4">
             <h2 className="text-2xl font-semibold">Comparación de características: Plan gratuito vs. Planes de pago</h2>
             
             <div className="space-y-6">
@@ -65,7 +154,7 @@ export function PlansTokensPage() {
           </div>
 
           {/* Planes de pago disponibles */}
-          <div className="space-y-4">
+          <div id="planes-disponibles" className="space-y-4">
             <h2 className="text-2xl font-semibold">Planes de Pago Disponibles</h2>
             <p className="text-base text-black lg:text-lg">
               Cada plan de pago incluye un número determinado de créditos mensuales asignados. 
@@ -128,7 +217,7 @@ export function PlansTokensPage() {
           </div>
 
           {/* Visualización de créditos */}
-          <div className="space-y-4">
+          <div id="visualizacion-creditos" className="space-y-4">
             <h2 className="text-2xl font-semibold">Visualización de Créditos</h2>
             <p className="text-base text-black lg:text-lg">
               Para ver cuántos créditos tienes o has usado, simplemente presiona el nombre de tu workspace 
@@ -144,7 +233,7 @@ export function PlansTokensPage() {
           </div>
 
           {/* Uso de créditos */}
-          <div className="space-y-4">
+          <div id="uso-creditos" className="space-y-4">
             <h2 className="text-2xl font-semibold">Uso de Créditos</h2>
             <p className="text-base text-black lg:text-lg">
               Nerd.lat tiene un sistema de créditos basado en el uso, donde enviar mensajes deduce créditos. 
@@ -180,7 +269,7 @@ export function PlansTokensPage() {
           </div>
 
           {/* Acumulación de créditos */}
-          <div className="space-y-4">
+          <div id="acumulacion-creditos" className="space-y-4">
             <h2 className="text-2xl font-semibold">Acumulación de Créditos</h2>
             <p className="text-base text-black lg:text-lg">
               Los créditos no utilizados se acumulan automáticamente al final de cada ciclo de facturación 
@@ -221,5 +310,6 @@ export function PlansTokensPage() {
           </div>
         </div>
       </div>
-    )
-  }
+    </>
+  )
+}
