@@ -1,10 +1,26 @@
 import { Resend } from 'resend'
 import { NextResponse } from 'next/server'
 
-const resend = new Resend(process.env.RESEND_API)
+// Force dynamic rendering for this API route
+export const dynamic = 'force-dynamic'
+
+let resend
 
 export async function POST(request) {
   try {
+    // Initialize Resend only when the function is called
+    if (!resend) {
+      const apiKey = process.env.RESEND_API || process.env.RESEND_API_KEY
+      if (!apiKey) {
+        console.error('RESEND_API environment variable is not set. Available env vars:', Object.keys(process.env).filter(key => key.includes('RESEND')))
+        return NextResponse.json(
+          { error: 'Server configuration error' },
+          { status: 500 }
+        )
+      }
+      resend = new Resend(apiKey)
+    }
+
     const { name, email, subject, message } = await request.json()
 
     if (!name || !email || !subject || !message) {
@@ -85,7 +101,24 @@ export async function POST(request) {
   } catch (error) {
     console.error('Error sending email:', error)
     return NextResponse.json(
-      { error: 'Error al enviar el email' },
+      { error: 'Error al enviar el email', details: error.message },
+      { status: 500 }
+    )
+  }
+}
+
+// Add a simple GET method for testing
+export async function GET() {
+  try {
+    const hasApiKey = !!(process.env.RESEND_API || process.env.RESEND_API_KEY)
+    return NextResponse.json({ 
+      status: 'Newsletter API is running',
+      hasApiKey,
+      timestamp: new Date().toISOString()
+    })
+  } catch (error) {
+    return NextResponse.json(
+      { error: 'API configuration error', details: error.message },
       { status: 500 }
     )
   }
