@@ -258,7 +258,7 @@ export function FAQPage() {
         <h1 className="text-xl font-bold tracking-tight lg:text-3xl text-left">
           Preguntas Frecuentes
         </h1>
-        <p className="text-base text-black lg:text-lg">
+        <p className="text-base text-black lg:text-lg text-left">
           Encuentra respuestas a las preguntas más comunes sobre Nerd.lat
         </p>
       </div>
