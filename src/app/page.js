@@ -7,6 +7,8 @@ import { SectionCards } from "@/components/section-cards"
 import { SiteHeader } from "@/components/site-header"
 import { WelcomePage, FeaturesGrid } from "@/components/welcome-page"
 import { PlansTokensPage } from "@/components/plans-tokens-page"
+import { FAQPage } from "@/components/faq-page"
+import { GettingStartedPage } from "@/components/getting-started"
 
 import {
   SidebarInset,
@@ -25,6 +27,17 @@ function DynamicContent() {
         <div className="w-full">
           <PlansTokensPage />
         </div>
+      )
+    case "Ayuda":
+      return (
+        <div className="w-full">
+          <FAQPage />
+        </div>
+      )
+    case "Empezando en Nerd.lat":
+      return (
+          <GettingStartedPage />
+        
       )
     case "Introducción":
     default:

@@ -1,5 +1,6 @@
 "use client"
 
+import { useState } from "react";
 import { IconCirclePlusFilled, IconMail } from "@tabler/icons-react";
 import { Megaphone } from "lucide-react";
 import { useRouter } from "next/navigation";
@@ -13,12 +14,14 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
 import { useTitle } from "@/contexts/TitleContext"
+import { NewsletterPopup } from "@/components/newsletter-popup"
 
 export function NavMain({
   items
 }) {
   const { updateTitle } = useTitle()
   const router = useRouter()
+  const [isNewsletterOpen, setIsNewsletterOpen] = useState(false)
   
   const handleItemClick = (title, url) => {
     updateTitle(title)
@@ -26,6 +29,10 @@ export function NavMain({
     if (url && url !== "#" && !url.startsWith("/")) {
       router.push(url)
     }
+  }
+
+  const handleNewsletterClick = () => {
+    setIsNewsletterOpen(true)
   }
   
   return (
@@ -43,9 +50,10 @@ export function NavMain({
             <Button
               size="icon"
               className="size-8 group-data-[collapsible=icon]:opacity-0"
-              variant="outline">
+              variant="outline"
+              onClick={handleNewsletterClick}>
               <IconMail />
-              <span className="sr-only">Inbox</span>
+              <span className="sr-only">Newsletter</span>
             </Button>
           </SidebarMenuItem>
         </SidebarMenu>
@@ -63,6 +71,11 @@ export function NavMain({
           ))}
         </SidebarMenu>
       </SidebarGroupContent>
+      
+      <NewsletterPopup 
+        isOpen={isNewsletterOpen} 
+        onClose={() => setIsNewsletterOpen(false)} 
+      />
     </SidebarGroup>
   );
 }
