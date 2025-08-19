@@ -41,8 +41,8 @@ export function FeaturesGrid() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
               </svg>
             </div>
-            <h1 className="text-lg font-semibold text-gray-900">Comenzando</h1>
-            <p className="text-sm text-gray-600">Tutorial paso a paso para crear tu primer proyecto</p>
+            <h1 className="text-lg font-semibold text-black">Comenzando</h1>
+            <p className="text-sm text-black">Tutorial paso a paso para crear tu primer proyecto</p>
           </div>
         </div>
 
@@ -54,8 +54,8 @@ export function FeaturesGrid() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
-            <h1 className="text-lg font-semibold text-gray-900">Características</h1>
-            <p className="text-sm text-gray-600">Funciones principales de Nerd</p>
+            <h1 className="text-lg font-semibold text-black">Características</h1>
+            <p className="text-sm text-black">Funciones principales de Nerd</p>
           </div>
         </div>
 
@@ -67,8 +67,8 @@ export function FeaturesGrid() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
             </div>
-            <h1 className="text-lg font-semibold text-gray-900">Integraciones</h1>
-            <p className="text-sm text-gray-600">Extiende la funcionalidad con integraciones</p>
+            <h1 className="text-lg font-semibold text-black">Integraciones</h1>
+            <p className="text-sm text-black">Extiende la funcionalidad con integraciones</p>
           </div>
         </div>
 
@@ -80,8 +80,8 @@ export function FeaturesGrid() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
             </div>
-            <h1 className="text-lg font-semibold text-gray-900">Consejos y Trucos</h1>
-            <p className="text-sm text-gray-600">Aprovecha al máximo Nerd</p>
+            <h1 className="text-lg font-semibold text-black">Consejos y Trucos</h1>
+            <p className="text-sm text-black">Aprovecha al máximo Nerd</p>
           </div>
         </div>
 
@@ -93,8 +93,8 @@ export function FeaturesGrid() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
               </svg>
             </div>
-            <h1 className="text-lg font-semibold text-gray-900">Ingeniería de Prompts</h1>
-            <p className="text-sm text-gray-600">Aprende estrategias efectivas de prompting</p>
+            <h1 className="text-lg font-semibold text-black">Ingeniería de Prompts</h1>
+            <p className="text-sm text-black">Aprende estrategias efectivas de prompting</p>
           </div>
         </div>
 
@@ -106,8 +106,8 @@ export function FeaturesGrid() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
               </svg>
             </div>
-            <h1 className="text-lg font-semibold text-gray-900">Casos de Uso</h1>
-            <p className="text-sm text-gray-600">Ver tutoriales en video y lo que otros han construido</p>
+            <h1 className="text-lg font-semibold text-black">Casos de Uso</h1>
+            <p className="text-sm text-black">Ver tutoriales en video y lo que otros han construido</p>
           </div>
         </div>
 
@@ -119,8 +119,8 @@ export function FeaturesGrid() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
               </svg>
             </div>
-            <h1 className="text-lg font-semibold text-gray-900">Glosario</h1>
-            <p className="text-sm text-gray-600">Aprende los términos clave</p>
+            <h1 className="text-lg font-semibold text-black">Glosario</h1>
+            <p className="text-sm text-black">Aprende los términos clave</p>
           </div>
         </div>
 
