@@ -54,8 +54,8 @@ export function TableOfContents({ sections }) {
 
   return (
     <div className="hidden xl:block fixed top-[7.5rem] right-8 z-30">
-      <div className="bg-white p-4 max-w-xs">
-        <h3 className="text-sm font-semibold text-gray-900 mb-3">
+      <div className="bg-white dark:bg-black p-4 max-w-xs">
+        <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">
           En esta página
         </h3>
         <nav className="space-y-1">
@@ -63,10 +63,10 @@ export function TableOfContents({ sections }) {
             <button
               key={section.id}
               onClick={() => scrollToSection(section.id)}
-              className={`block text-left w-full px-2 py-1 rounded text-sm transition-colors hover:bg-gray-100 ${
+              className={`block text-left w-full px-2 py-1 rounded text-sm transition-colors hover:bg-gray-100 dark:hover:bg-gray-800 ${
                 activeSection === section.id
-                  ? 'text-blue-600 bg-blue-50 font-medium border-l-2 border-blue-600 pl-3'
-                  : 'text-gray-600 hover:text-gray-900'
+                  ? 'text-blue-600 bg-blue-50 dark:bg-blue-900 font-medium border-l-2 border-blue-600 pl-3'
+                  : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
               }`}
             >
               {section.title}

@@ -2,14 +2,14 @@ import { useState } from "react"
 
 const FAQItem = ({ question, answer, isOpen, onClick }) => {
   return (
-    <div className="border border-gray-200 rounded-lg mb-4 overflow-hidden">
+    <div className="border border-gray-200 dark:border-gray-700 rounded-lg mb-4 overflow-hidden">
       <button
-        className="w-full text-left py-4 px-4 flex justify-between items-center hover:bg-gray-50 transition-colors"
+        className="w-full text-left py-4 px-4 flex justify-between items-center hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
         onClick={onClick}
       >
-        <h3 className="text-lg font-semibold text-gray-900">{question}</h3>
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{question}</h3>
         <svg
-          className={`w-5 h-5 text-gray-500 transform transition-transform ${
+          className={`w-5 h-5 text-gray-500 dark:text-gray-400 transform transition-transform ${
             isOpen ? "rotate-180" : ""
           }`}
           fill="none"
@@ -25,8 +25,8 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => {
         </svg>
       </button>
       {isOpen && (
-        <div className="pb-4 px-4 border-t border-gray-100">
-          <div className="text-base text-black lg:text-lg space-y-3 pt-4">
+        <div className="pb-4 px-4 border-t border-gray-100 dark:border-gray-700">
+          <div className="text-base text-black dark:text-white lg:text-lg space-y-3 pt-4">
             {answer}
           </div>
         </div>
@@ -139,7 +139,7 @@ export function FAQPage() {
             <li>Acumulación hasta 12 veces el límite mensual</li>
             <li>Validez de 12 meses después de ser agregados</li>
           </ul>
-          <p className="text-sm bg-yellow-50 border border-yellow-200 rounded p-2 mt-2">
+          <p className="text-sm bg-yellow-50 dark:bg-yellow-900/30 border border-yellow-200 dark:border-yellow-700 rounded p-2 mt-2 text-black dark:text-yellow-200">
             <strong>Importante:</strong> Los créditos diarios no se acumulan, y al cancelar la suscripción, todos los créditos acumulados expiran.
           </p>
         </div>
@@ -208,7 +208,7 @@ export function FAQPage() {
             <li>Pierdes acceso a funcionalidades premium</li>
             <li>Vuelves automáticamente al plan gratuito</li>
           </ul>
-          <p className="mt-2 text-sm bg-red-50 border border-red-200 rounded p-2">
+          <p className="mt-2 text-sm bg-red-50 dark:bg-red-900/30 border border-red-200 dark:border-red-700 rounded p-2 text-black dark:text-red-200">
             <strong>Nota:</strong> Los créditos no son reembolsables y no se transfieren al plan gratuito.
           </p>
         </div>
@@ -255,10 +255,10 @@ export function FAQPage() {
   return (
     <div className="flex flex-col items-start justify-start min-h-[80vh] px-4 lg:px-6">
       <div className="text-center space-y-3 px-4 lg:px-6">
-        <h1 className="text-xl font-bold tracking-tight lg:text-3xl text-left">
+        <h1 className="text-xl font-bold tracking-tight lg:text-3xl text-left text-black dark:text-white">
           Preguntas Frecuentes
         </h1>
-        <p className="text-base text-black lg:text-lg text-left">
+        <p className="text-base text-black dark:text-white lg:text-lg text-left">
           Encuentra respuestas a las preguntas más comunes sobre Nerd.lat
         </p>
       </div>
@@ -276,9 +276,9 @@ export function FAQPage() {
           ))}
         </div>
         
-        <div className="mt-8 p-4 bg-blue-50 border border-blue-200 rounded-lg">
-          <h3 className="text-lg font-semibold text-blue-800 mb-2">¿No encuentras lo que buscas?</h3>
-          <p className="text-base text-blue-700">
+        <div className="mt-8 p-4 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-lg">
+          <h3 className="text-lg font-semibold text-blue-800 dark:text-blue-200 mb-2">¿No encuentras lo que buscas?</h3>
+          <p className="text-base text-blue-700 dark:text-blue-200">
             Si tienes otras preguntas o necesitas ayuda adicional, no dudes en contactar a nuestro equipo de soporte. 
             Estamos aquí para ayudarte a aprovechar al máximo Nerd.lat.
           </p>
