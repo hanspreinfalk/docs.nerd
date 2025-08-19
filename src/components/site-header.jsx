@@ -14,7 +14,7 @@ export function SiteHeader() {
     <>
       {/* Main header */}
       <header
-        className="flex h-16 shrink-0 items-center gap-2 border-b transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-16 fixed top-0 left-0 right-0 z-50 bg-white">
+        className="flex h-16 shrink-0 items-center gap-2 border-b border-gray-100 transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-16 fixed top-0 left-0 right-0 z-50 bg-white">
         <div className="flex w-full items-center justify-between px-4 lg:px-6">
           {/* Left side - Logo and title */}
           <div className="flex items-center gap-3">
@@ -88,8 +88,24 @@ export function SiteHeader() {
         </div>
       </header>
 
+      {/* Desktop secondary header */}
+      <header className="hidden md:flex h-12 shrink-0 items-center bg-white gap-2 border-b border-gray-100 fixed top-16 left-0 right-0 z-40">
+        <div className="flex w-full items-center px-6">
+          <nav className="flex items-center space-x-8">
+            <a href="#" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Introducción</a>
+            <a href="#" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Características</a>
+            <a href="#" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Integraciones</a>
+            <a href="#" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Consejos y Trucos</a>
+            <a href="#" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Ingeniería de Prompts</a>
+            <a href="#" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Casos de Uso</a>
+            <a href="#" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Glosario</a>
+            <a href="#" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Changelog</a>
+          </nav>
+        </div>
+      </header>
+
       {/* Mobile secondary header */}
-      <header className="md:hidden flex h-12 shrink-0 items-center bg-white gap-2 border-b fixed top-16 left-0 right-0 z-40">
+      <header className="md:hidden flex h-12 shrink-0 items-center bg-white gap-2 border-b border-gray-200 fixed top-16 left-0 right-0 z-40">
         <div className="flex w-full items-center px-6">
           <SidebarTrigger className="-ml-1" />
           <span className="ml-3 text-sm font-medium text-gray-600">{currentTitle}</span>

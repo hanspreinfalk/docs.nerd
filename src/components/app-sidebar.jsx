@@ -165,7 +165,7 @@ export function AppSidebar({
           </SidebarMenuItem>
         </SidebarMenu> */}
       </SidebarHeader>
-      <SidebarContent className="pt-16 md:pt-16 pt-28">
+      <SidebarContent className="pt-16 md:pt-28 pt-28">
         <NavMain items={data.navMain} />
         <NavDocuments items={data.documents} />
         <NavSecondary items={data.navSecondary} className="mt-auto" />
