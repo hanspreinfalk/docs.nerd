@@ -93,6 +93,9 @@ export function WelcomePage() {
     } else if (title === "Consejos y Trucos") {
       // Navigate to page in current tab (causes reload)
       window.location.href = '/consejos-y-trucos'   
+    }
+    else if (title === "Empezando en Nerd.lat"){
+      window.location.href = '/empezando-en-nerd'
     } else {
       updateTitle(title)
     }
