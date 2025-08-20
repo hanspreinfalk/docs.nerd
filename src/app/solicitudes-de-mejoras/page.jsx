@@ -39,8 +39,15 @@ function SolicitudesDeMejorasPage() {
     }
   ])
 
-  const [newPost, setNewPost] = useState({ title: "", content: "" })
+  const [newPost, setNewPost] = useState({ 
+    title: "", 
+    content: "", 
+    name: "", 
+    email: "", 
+    type: "💡 Solicitud de Funcionalidades" 
+  })
   const [showForm, setShowForm] = useState(false)
+  const [showNewPostModal, setShowNewPostModal] = useState(false)
   const [selectedPost, setSelectedPost] = useState(null)
   const [showModal, setShowModal] = useState(false)
   const [newComment, setNewComment] = useState("")
@@ -56,24 +63,30 @@ function SolicitudesDeMejorasPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    if (newPost.title.trim() && newPost.content.trim()) {
+    if (newPost.title.trim() && newPost.content.trim() && newPost.name.trim() && newPost.email.trim()) {
       const post = {
         id: posts.length + 1,
         title: newPost.title,
         content: newPost.content,
-        author: "Usuario Anónimo",
+        author: newPost.name,
         date: new Date().toISOString().split('T')[0],
         votes: 0,
         replies: 0,
         likes: 0,
         status: "Open",
-        board: "💡 Feature Request",
+        board: newPost.type,
         daysAgo: 0,
         convexId: null
       }
       setPosts([post, ...posts])
-      setNewPost({ title: "", content: "" })
-      setShowForm(false)
+      setNewPost({ 
+        title: "", 
+        content: "", 
+        name: "", 
+        email: "", 
+        type: "💡 Solicitud de Funcionalidades" 
+      })
+      setShowNewPostModal(false)
     }
   }
 
@@ -126,54 +139,12 @@ function SolicitudesDeMejorasPage() {
       <div className="w-full max-w-none xl:max-w-6xl xl:pr-80 mt-6 px-4 lg:px-6">
         <div className="mb-6">
           <button
-            onClick={() => setShowForm(!showForm)}
+            onClick={() => setShowNewPostModal(true)}
             className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors"
           >
-            {showForm ? "Cancelar" : "Nueva Solicitud"}
+            Nueva Solicitud
           </button>
         </div>
-
-        {showForm && (
-          <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700 mb-6">
-            <h2 className="text-lg font-semibold text-black dark:text-white mb-4">
-              Crear Nueva Solicitud
-            </h2>
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium text-black dark:text-white mb-2">
-                  Título
-                </label>
-                <input
-                  type="text"
-                  value={newPost.title}
-                  onChange={(e) => setNewPost({ ...newPost, title: e.target.value })}
-                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="Describe tu solicitud en pocas palabras..."
-                  required
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-black dark:text-white mb-2">
-                  Descripción
-                </label>
-                <textarea
-                  value={newPost.content}
-                  onChange={(e) => setNewPost({ ...newPost, content: e.target.value })}
-                  rows={4}
-                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="Explica tu idea en detalle y cómo beneficiaría a los usuarios..."
-                  required
-                />
-              </div>
-              <button
-                type="submit"
-                className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
-              >
-                Publicar Solicitud
-              </button>
-            </form>
-          </div>
-        )}
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {posts.map((post) => (
@@ -246,6 +217,163 @@ function SolicitudesDeMejorasPage() {
           </p>
         </div> */}
       </div>
+
+      {/* Modal para nueva publicación */}
+      {showNewPostModal && (
+        <div className="fixed inset-0 bg-black/20 backdrop-blur-sm flex items-center justify-center p-4 z-50">
+          <div className="bg-white dark:bg-gray-900 rounded-lg max-w-6xl w-full max-h-[90vh] overflow-hidden flex">
+            {/* Contenido principal */}
+            <div className="flex-1 overflow-y-auto">
+              <div className="p-6">
+                <div className="flex items-start justify-between mb-4">
+                  <h2 className="text-xl font-bold text-black dark:text-white pr-4">
+                    Crear Nueva Solicitud
+                  </h2>
+                  <button
+                    onClick={() => setShowNewPostModal(false)}
+                    className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 flex-shrink-0"
+                  >
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+                
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-medium text-black dark:text-white mb-2">
+                        Nombre completo *
+                      </label>
+                      <input
+                        type="text"
+                        value={newPost.name}
+                        onChange={(e) => setNewPost({ ...newPost, name: e.target.value })}
+                        className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        placeholder="Tu nombre completo"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-black dark:text-white mb-2">
+                        Correo electrónico *
+                      </label>
+                      <input
+                        type="email"
+                        value={newPost.email}
+                        onChange={(e) => setNewPost({ ...newPost, email: e.target.value })}
+                        className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        placeholder="tu@email.com"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-black dark:text-white mb-2">
+                      Tipo de solicitud *
+                    </label>
+                    <select
+                      value={newPost.type}
+                      onChange={(e) => setNewPost({ ...newPost, type: e.target.value })}
+                      className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      required
+                    >
+                      <option value="💡 Solicitud de Funcionalidades">💡 Solicitud de Funcionalidades</option>
+                      <option value="📣 Feedback">📣 Feedback</option>
+                      <option value="🧩 Integraciones">🧩 Integraciones</option>
+                      <option value="⁉️ Preguntas">⁉️ Preguntas</option>
+                      <option value="🐛 Caza de Errores">🐛 Caza de Errores</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-black dark:text-white mb-2">
+                      Título de la solicitud *
+                    </label>
+                    <input
+                      type="text"
+                      value={newPost.title}
+                      onChange={(e) => setNewPost({ ...newPost, title: e.target.value })}
+                      className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      placeholder="Describe tu solicitud en pocas palabras..."
+                      required
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-black dark:text-white mb-2">
+                      Descripción detallada *
+                    </label>
+                    <textarea
+                      value={newPost.content}
+                      onChange={(e) => setNewPost({ ...newPost, content: e.target.value })}
+                      rows={6}
+                      className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      placeholder="Explica tu idea en detalle, cómo beneficiaría a los usuarios, y cualquier información adicional relevante..."
+                      required
+                    />
+                  </div>
+
+                  <div className="flex justify-end space-x-3 pt-4 border-t border-gray-200 dark:border-gray-700">
+                    <button
+                      type="button"
+                      onClick={() => setShowNewPostModal(false)}
+                      className="px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+                    >
+                      Cancelar
+                    </button>
+                    <button
+                      type="submit"
+                      className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
+                    >
+                      Publicar Solicitud
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            {/* Sidebar derecho con preview/ayuda */}
+            <div className="w-80 bg-gray-50 dark:bg-gray-800 border-l border-gray-200 dark:border-gray-700 p-6">
+              <div className="space-y-6">
+                <div>
+                  <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">
+                    💡 Consejos para una buena solicitud
+                  </h4>
+                  <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-2">
+                    <li>• Sé específico sobre qué quieres mejorar</li>
+                    <li>• Explica cómo beneficiaría a otros usuarios</li>
+                    <li>• Incluye ejemplos si es posible</li>
+                    <li>• Revisa si alguien ya hizo la misma solicitud</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">
+                    📝 Tu información
+                  </h4>
+                  <p className="text-xs text-gray-600 dark:text-gray-300">
+                    Usamos tu nombre y email para identificarte como autor y enviarte actualizaciones sobre tu solicitud.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">
+                    🚀 Proceso de revisión
+                  </h4>
+                  <div className="text-xs text-gray-600 dark:text-gray-300 space-y-1">
+                    <div>1. Tu solicitud se marca como "Abierto"</div>
+                    <div>2. El equipo la revisa y comenta</div>
+                    <div>3. Se decide si implementar</div>
+                    <div>4. Te notificamos los cambios</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {showModal && selectedPost && (
         <div className="fixed inset-0 bg-black/20 backdrop-blur-sm flex items-center justify-center p-4 z-50">
@@ -404,7 +532,7 @@ function SolicitudesDeMejorasPage() {
               ⁉️ Preguntas
             </button>
             <button className="block text-left w-full px-2 py-1 rounded text-sm transition-colors hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-600 dark:text-gray-300">
-              🐛 Caza de Bugs
+              🐛 Caza de Errores
             </button>
           </div>
 
