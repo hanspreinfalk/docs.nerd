@@ -248,7 +248,7 @@ function SolicitudesDeMejorasPage() {
       </div>
 
       {showModal && selectedPost && (
-        <div className="fixed inset-0 bg-gray-900 bg-opacity-10 backdrop-blur-sm flex items-center justify-center p-4 z-50">
+        <div className="fixed inset-0 bg-black/20 backdrop-blur-sm flex items-center justify-center p-4 z-50">
           <div className="bg-white dark:bg-gray-900 rounded-lg max-w-6xl w-full max-h-[90vh] overflow-hidden flex">
             {/* Contenido principal */}
             <div className="flex-1 overflow-y-auto">
