@@ -1,16 +1,30 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { SidebarTrigger } from "@/components/ui/sidebar"
 import { useTitle } from "@/contexts/TitleContext"
 import { useTheme } from "@/contexts/ThemeContext"
+import { SearchOverlay } from "@/components/search-overlay"
 
 export function SiteHeader() {
   const { currentTitle, updateTitle } = useTitle()
   const { isDarkMode, toggleTheme } = useTheme()
   const [isSearchOpen, setIsSearchOpen] = useState(false)
+
+  // Global keyboard shortcut for search
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault()
+        setIsSearchOpen(true)
+      }
+    }
+
+    document.addEventListener('keydown', handleKeyDown)
+    return () => document.removeEventListener('keydown', handleKeyDown)
+  }, [])
   
   const handleNavClick = (title) => {
     if (title === "Ingeniería de Prompts") {
@@ -48,13 +62,15 @@ export function SiteHeader() {
           {/* Center - Search bar (Desktop only) */}
           <div className="flex-1 max-w-md mx-4 hidden md:block">
             <div className="relative">
-              <input
-                type="text"
-                placeholder="Buscar..."
-                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
-              />
+              <button
+                onClick={() => setIsSearchOpen(true)}
+                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-left flex items-center"
+              >
+                <span className="text-gray-500 dark:text-gray-400">Buscar documentación...</span>
+                <kbd className="ml-auto text-xs bg-gray-100 dark:bg-gray-700 px-1.5 py-0.5 rounded border hidden lg:inline">⌘K</kbd>
+              </button>
               <svg
-                className="absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"
+                className="absolute right-12 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -153,48 +169,11 @@ export function SiteHeader() {
         </div>
       </header>
 
-      {/* Mobile search overlay */}
-      {isSearchOpen && (
-        <>
-          {/* Blur backdrop - covers everything except the search input */}
-          <div 
-            className="md:hidden fixed top-0 left-0 right-0 bottom-0 backdrop-blur-sm z-40"
-            onClick={() => setIsSearchOpen(false)}
-          />
-          
-          {/* Search input - positioned above the backdrop */}
-          <div className="md:hidden fixed left-0 right-0 z-50 bg-white dark:bg-black border-b shadow-sm">
-            <div className="p-4">
-              <div className="relative">
-                <input
-                  type="text"
-                  placeholder="Buscar..."
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
-                  autoFocus
-                />
-                <button
-                  onClick={() => setIsSearchOpen(false)}
-                  className="absolute right-3 top-1/2 transform -translate-y-1/2 p-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800"
-                >
-                  <svg
-                    className="w-4 h-4 text-gray-400 dark:text-gray-500"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
-        </>
-      )}
+      {/* Search Overlay */}
+      <SearchOverlay 
+        isOpen={isSearchOpen} 
+        onClose={() => setIsSearchOpen(false)} 
+      />
     </>
   );
 }
