@@ -101,7 +101,7 @@ export function IngenieriaPromptsPage() {
           </p>
         </div>
 
-        <div className="w-full max-w-3xl mt-6 px-4 lg:px-6">
+        <div className="max-w-2xl mt-6 px-4 lg:px-4 md:px-2">
           <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-6">
             <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">¡Atención!</h3>
             <p className="text-sm text-blue-800 dark:text-blue-200">
@@ -109,6 +109,9 @@ export function IngenieriaPromptsPage() {
             </p>
           </div>
         </div>
+        
+
+        
 
         <div id="que-es-prompting" className="w-full max-w-3xl mt-6 px-4 lg:px-6">
           <h2 className="text-lg font-semibold text-black dark:text-white mb-4">
