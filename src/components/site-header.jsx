@@ -19,6 +19,15 @@ export function SiteHeader() {
     } else if (title === "Consejos y Trucos") {
       // Navigate to page in current tab (causes reload)
       window.location.href = '/consejos-y-trucos'
+    } else if (title === "Casos de Uso") {
+      // Navigate to page in current tab (causes reload)
+      window.location.href = '/casos-de-uso'
+    } else if (title === "Glosario") {
+      // Navigate to page in current tab (causes reload)
+      window.location.href = '/glosario'
+    } else if (title === "Integraciones") {
+      // Navigate to page in current tab (causes reload)
+      window.location.href = '/integraciones'
     } else {
       updateTitle(title)
     }
@@ -126,13 +135,12 @@ export function SiteHeader() {
         <div className="flex w-full items-center px-6">
           <nav className="flex items-center space-x-8">
             <button onClick={() => handleNavClick("Introducción")} className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Introducción</button>
-            <button onClick={() => handleNavClick("Características")} className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Características</button>
             <button onClick={() => handleNavClick("Integraciones")} className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Integraciones</button>
             <button onClick={() => handleNavClick("Consejos y Trucos")} className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Consejos y Trucos</button>
             <button onClick={() => handleNavClick("Ingeniería de Prompts")} className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Ingeniería de Prompts</button>
             <button onClick={() => handleNavClick("Casos de Uso")} className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Casos de Uso</button>
             <button onClick={() => handleNavClick("Glosario")} className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Glosario</button>
-            <button onClick={() => handleNavClick("Changelog")} className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Changelog</button>
+            
           </nav>
         </div>
       </header>

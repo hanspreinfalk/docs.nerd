@@ -47,7 +47,7 @@ export function NavMain({
           <SidebarMenuItem className="flex items-center gap-2">
             <SidebarMenuButton
               tooltip="Anuncios"
-              onClick={() => handleItemClick("Anuncios", "#")}
+              onClick={() => handleItemClick("Anuncios", "/anuncios")}
               className="bg-[#43D354] text-primary-foreground hover:bg-primary/90 hover:text-primary-foreground active:bg-primary/90 active:text-primary-foreground min-w-8 duration-200 ease-linear">
               <Megaphone />
               <span>Anuncios</span>
