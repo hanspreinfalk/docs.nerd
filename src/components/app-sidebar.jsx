@@ -19,7 +19,7 @@ import {
   IconUsers,
 } from "@tabler/icons-react"
 
-import { DoorOpen, Rocket, Banknote, HelpCircle, BookOpen} from "lucide-react"
+import { DoorOpen, Rocket, Banknote, HelpCircle, BookOpen, Brain, Lightbulb} from "lucide-react"
 
 import { NavDocuments } from "@/components/nav-documents"
 import { NavMain } from "@/components/nav-main"
@@ -45,24 +45,25 @@ const data = {
     },
     {
       title: "Solicitudes de mejoras",
-      url: "#",
+      url: "/solicitudes-de-mejoras",
       icon: Rocket,
     },
     {
       title: "Planes y tokens",
-      url: "#",
+      url: "/planes-y-tokens",
       icon: Banknote,
     },
     {
       title: "Ayuda",
-      url: "#",
+      url: "/ayuda",
       icon: HelpCircle,
     },
     {
       title: "Empezando en Nerd.lat",
-      url: "#",
+      url: "/empezando-en-nerd",
       icon: BookOpen,
     },
+
 
   ],
   navClouds: [

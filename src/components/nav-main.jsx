@@ -24,10 +24,15 @@ export function NavMain({
   const [isNewsletterOpen, setIsNewsletterOpen] = useState(false)
   
   const handleItemClick = (title, url) => {
-    updateTitle(title)
-    // Solo navegar si no es una ruta interna que manejamos dinámicamente
-    if (url && url !== "#" && !url.startsWith("/")) {
+    if (url && url !== "#" && url !== "/") {
+      // Navigate to dedicated page routes
       router.push(url)
+    } else if (url === "/") {
+      // Navigate to home page
+      router.push("/")
+    } else {
+      // Update title for dynamic content (legacy behavior)
+      updateTitle(title)
     }
   }
 

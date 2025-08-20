@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useTitle } from '@/contexts/TitleContext'
 
 function WelcomeTableOfContents({ sections }) {
   const [activeSection, setActiveSection] = useState('')
@@ -76,12 +77,26 @@ function WelcomeTableOfContents({ sections }) {
 }
 
 export function WelcomePage() {
+  const { updateTitle } = useTitle()
+  
   const sections = [
     { id: 'bienvenido', title: 'Bienvenido' },
     { id: 'video-introduccion', title: 'Video Introducción' },
     { id: 'sobre-nerd', title: 'Sobre Nerd.lat' },
     { id: 'caracteristicas', title: 'Características Principales' }
   ]
+
+  const handleCardClick = (title) => {
+    if (title === "Ingeniería de Prompts") {
+      // Open in new tab with specific URL for "Ingeniería de Prompts"
+      window.open('/ingenieria-prompts-page', '_blank')
+    } else if (title === "Consejos y Trucos") {
+      // Navigate to page in current tab (causes reload)
+      window.location.href = '/consejos-y-trucos'   
+    } else {
+      updateTitle(title)
+    }
+  }
 
   return (
     <>
@@ -114,7 +129,10 @@ export function WelcomePage() {
       <div id="caracteristicas" className="w-full max-w-3xl px-4 lg:px-6 -mt-0 lg:mt-0 lg:ml-4">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 lg:px-2">
         {/* Card 1 */}
-        <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700 h-[180px] flex flex-col">
+        <div 
+          className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700 h-[180px] flex flex-col cursor-pointer hover:shadow-lg transition-shadow"
+          onClick={() => handleCardClick("Empezando en Nerd.lat")}
+        >
           <div className="space-y-3 flex flex-col h-full">
             <div className="w-12 h-12 flex items-center justify-center">
               <svg className="w-8 h-8" style={{color: '#5DD73F'}} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -153,7 +171,10 @@ export function WelcomePage() {
         </div>
 
         {/* Card 4 */}
-        <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700 h-[180px] flex flex-col">
+        <div 
+          className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700 h-[180px] flex flex-col cursor-pointer hover:shadow-lg transition-shadow"
+          onClick={() => handleCardClick("Consejos y Trucos")}
+        >
           <div className="space-y-3 flex flex-col h-full">
             <div className="w-12 h-12 flex items-center justify-center">
               <svg className="w-8 h-8" style={{color: '#5DD73F'}} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -166,7 +187,15 @@ export function WelcomePage() {
         </div>
 
         {/* Card 5 */}
-        <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700 h-[180px] flex flex-col">
+        <div 
+          className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700 h-[180px] flex flex-col relative cursor-pointer hover:shadow-lg transition-shadow"
+          onClick={() => handleCardClick("Ingeniería de Prompts")}
+        >
+          <div className="absolute top-2 right-2">
+            <svg className="w-4 h-4 text-gray-400 dark:text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </div>
           <div className="space-y-3 flex flex-col h-full">
             <div className="w-12 h-12 flex items-center justify-center">
               <svg className="w-8 h-8" style={{color: '#5DD73F'}} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -179,7 +208,12 @@ export function WelcomePage() {
         </div>
 
         {/* Card 6 */}
-        <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700 h-[180px] flex flex-col">
+        <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700 h-[180px] flex flex-col relative">
+          <div className="absolute top-2 right-2">
+            <svg className="w-4 h-4 text-gray-400 dark:text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </div>
           <div className="space-y-3 flex flex-col h-full">
             <div className="w-12 h-12 flex items-center justify-center">
               <svg className="w-8 h-8" style={{color: '#5DD73F'}} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -192,7 +226,12 @@ export function WelcomePage() {
         </div>
 
         {/* Card 7 */}
-        <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700 h-[180px] flex flex-col">
+        <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700 h-[180px] flex flex-col relative">
+          <div className="absolute top-2 right-2">
+            <svg className="w-4 h-4 text-gray-400 dark:text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </div>
           <div className="space-y-3 flex flex-col h-full">
             <div className="w-12 h-12 flex items-center justify-center">
               <svg className="w-8 h-8" style={{color: '#5DD73F'}} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -205,7 +244,12 @@ export function WelcomePage() {
         </div>
 
         {/* Card 8 */}
-        <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700 h-[180px] flex flex-col">
+        <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700 h-[180px] flex flex-col relative">
+          <div className="absolute top-2 right-2">
+            <svg className="w-4 h-4 text-gray-400 dark:text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </div>
           <div className="space-y-3 flex flex-col h-full">
             <div className="w-12 h-12 flex items-center justify-center">
               <svg className="w-8 h-8" style={{color: '#5DD73F'}} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -218,7 +262,12 @@ export function WelcomePage() {
         </div>
 
         {/* Card 9 */}
-        <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700 h-[180px] flex flex-col">
+        <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700 h-[180px] flex flex-col relative">
+          <div className="absolute top-2 right-2">
+            <svg className="w-4 h-4 text-gray-400 dark:text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </div>
           <div className="space-y-3 flex flex-col h-full">
             <div className="w-12 h-12 flex items-center justify-center">
               <svg className="w-8 h-8" style={{color: '#5DD73F'}} fill="none" stroke="currentColor" viewBox="0 0 24 24">

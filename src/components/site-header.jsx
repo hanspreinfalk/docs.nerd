@@ -13,7 +13,15 @@ export function SiteHeader() {
   const [isSearchOpen, setIsSearchOpen] = useState(false)
   
   const handleNavClick = (title) => {
-    updateTitle(title)
+    if (title === "Ingeniería de Prompts") {
+      // Navigate to page in current tab (causes reload)
+      window.location.href = '/ingenieria-prompts-page'
+    } else if (title === "Consejos y Trucos") {
+      // Navigate to page in current tab (causes reload)
+      window.location.href = '/consejos-y-trucos'
+    } else {
+      updateTitle(title)
+    }
   }
   
   return (
