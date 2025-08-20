@@ -10,6 +10,7 @@ import { PlansTokensPage } from "@/components/plans-tokens-page"
 import { FAQPage } from "@/components/faq-page"
 import { GettingStartedPage } from "@/components/getting-started"
 import { IngenieriaPromptsPage } from "@/components/ingenieria-prompts-page"
+import { ConsejosTrucosPage } from "@/components/consejos-trucos-page"
 
 import {
   SidebarInset,
@@ -44,6 +45,12 @@ function DynamicContent() {
       return (
         <div className="w-full">
           <IngenieriaPromptsPage />
+        </div>
+      )
+    case "Consejos y Trucos":
+      return (
+        <div className="w-full">
+          <ConsejosTrucosPage />
         </div>
       )
     case "Introducción":
