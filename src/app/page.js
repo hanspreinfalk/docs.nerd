@@ -9,6 +9,7 @@ import { WelcomePage, FeaturesGrid } from "@/components/welcome-page"
 import { PlansTokensPage } from "@/components/plans-tokens-page"
 import { FAQPage } from "@/components/faq-page"
 import { GettingStartedPage } from "@/components/getting-started"
+import { IngenieriaPromptsPage } from "@/components/ingenieria-prompts-page"
 
 import {
   SidebarInset,
@@ -38,6 +39,12 @@ function DynamicContent() {
       return (
           <GettingStartedPage />
         
+      )
+    case "Ingeniería de Prompts":
+      return (
+        <div className="w-full">
+          <IngenieriaPromptsPage />
+        </div>
       )
     case "Introducción":
     default:

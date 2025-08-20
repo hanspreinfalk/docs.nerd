@@ -51,7 +51,7 @@ function WelcomeTableOfContents({ sections }) {
 
   return (
     <div className="hidden xl:block fixed top-[7.5rem] right-8 z-30">
-      <div className="bg-white dark:bg-black p-4 max-w-xs">
+      {/* <div className="bg-white dark:bg-black p-4 max-w-xs">
         <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">
           En esta página
         </h3>
@@ -70,7 +70,7 @@ function WelcomeTableOfContents({ sections }) {
             </button>
           ))}
         </nav>
-      </div>
+      </div> */}
     </div>
   )
 }

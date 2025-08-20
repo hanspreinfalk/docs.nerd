@@ -8,9 +8,13 @@ import { useTitle } from "@/contexts/TitleContext"
 import { useTheme } from "@/contexts/ThemeContext"
 
 export function SiteHeader() {
-  const { currentTitle } = useTitle()
+  const { currentTitle, updateTitle } = useTitle()
   const { isDarkMode, toggleTheme } = useTheme()
   const [isSearchOpen, setIsSearchOpen] = useState(false)
+  
+  const handleNavClick = (title) => {
+    updateTitle(title)
+  }
   
   return (
     <>
@@ -113,14 +117,14 @@ export function SiteHeader() {
       <header className="hidden md:flex h-12 shrink-0 items-center bg-white dark:bg-black gap-2 border-b border-gray-100 dark:border-gray-800 fixed top-16 left-0 right-0 z-40">
         <div className="flex w-full items-center px-6">
           <nav className="flex items-center space-x-8">
-            <a href="#" className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Introducción</a>
-            <a href="#" className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Características</a>
-            <a href="#" className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Integraciones</a>
-            <a href="#" className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Consejos y Trucos</a>
-            <a href="#" className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Prompting</a>
-            <a href="#" className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Casos de Uso</a>
-            <a href="#" className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Glosario</a>
-            <a href="#" className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Changelog</a>
+            <button onClick={() => handleNavClick("Introducción")} className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Introducción</button>
+            <button onClick={() => handleNavClick("Características")} className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Características</button>
+            <button onClick={() => handleNavClick("Integraciones")} className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Integraciones</button>
+            <button onClick={() => handleNavClick("Consejos y Trucos")} className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Consejos y Trucos</button>
+            <button onClick={() => handleNavClick("Ingeniería de Prompts")} className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Ingeniería de Prompts</button>
+            <button onClick={() => handleNavClick("Casos de Uso")} className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Casos de Uso</button>
+            <button onClick={() => handleNavClick("Glosario")} className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Glosario</button>
+            <button onClick={() => handleNavClick("Changelog")} className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Changelog</button>
           </nav>
         </div>
       </header>

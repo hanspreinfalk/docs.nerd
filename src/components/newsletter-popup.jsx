@@ -82,12 +82,12 @@ export function NewsletterPopup({ isOpen, onClose }) {
       <Dialog open={isOpen} onOpenChange={handleClose}>
         <DialogContent className="sm:max-w-md">
           <div className="flex flex-col items-center justify-center space-y-4 py-8">
-            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center">
-              <IconCheck className="w-8 h-8 text-green-600" />
+            <div className="w-16 h-16 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center">
+              <IconCheck className="w-8 h-8 text-green-600 dark:text-green-400" />
             </div>
             <div className="text-center space-y-2">
-              <h3 className="text-lg font-semibold text-gray-900">¡Mensaje enviado!</h3>
-              <p className="text-sm text-gray-600">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">¡Mensaje enviado!</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-300">
                 Gracias por tu feedback. Hemos recibido tu mensaje y lo revisaremos pronto.
               </p>
             </div>
@@ -102,12 +102,9 @@ export function NewsletterPopup({ isOpen, onClose }) {
       <DialogContent className="sm:max-w-lg">
         <DialogHeader>
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-              <IconMail className="w-5 h-5 text-blue-600" />
-            </div>
             <div>
-              <DialogTitle className="text-xl font-semibold">Déjanos un mensaje o tus recomendaciones</DialogTitle>
-              <DialogDescription className="text-sm text-gray-600">
+              <DialogTitle className="text-xl font-semibold text-black dark:text-white">Déjanos un mensaje o tus recomendaciones</DialogTitle>
+              <DialogDescription className="text-sm text-gray-600 dark:text-gray-300">
                 Tu opinión es importante para nosotros. Comparte tus ideas, sugerencias o comentarios
               </DialogDescription>
             </div>
@@ -118,7 +115,7 @@ export function NewsletterPopup({ isOpen, onClose }) {
           <div className="space-y-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                   Nombre *
                 </label>
                 <Input
@@ -133,7 +130,7 @@ export function NewsletterPopup({ isOpen, onClose }) {
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                   Email *
                 </label>
                 <Input
@@ -150,7 +147,7 @@ export function NewsletterPopup({ isOpen, onClose }) {
             </div>
             
             <div>
-              <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
+              <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                 Asunto *
               </label>
               <Input
@@ -166,7 +163,7 @@ export function NewsletterPopup({ isOpen, onClose }) {
             </div>
             
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+              <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                 Mensaje *
               </label>
               <Textarea
@@ -182,13 +179,13 @@ export function NewsletterPopup({ isOpen, onClose }) {
           </div>
 
           {error && (
-            <div className="p-3 bg-red-50 border border-red-200 rounded-lg">
-              <p className="text-sm text-red-800">{error}</p>
+            <div className="p-3 bg-red-50 dark:bg-red-900/30 border border-red-200 dark:border-red-700 rounded-lg">
+              <p className="text-sm text-red-800 dark:text-red-200">{error}</p>
             </div>
           )}
 
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-3">
-            <p className="text-xs text-blue-800">
+          <div className="bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-lg p-3">
+            <p className="text-xs text-blue-800 dark:text-blue-200">
               Tu feedback es valioso para mejorar Nerd.lat. Todos los mensajes son revisados por nuestro equipo 
               y nos ayudan a crear una mejor experiencia para todos los usuarios.
             </p>
