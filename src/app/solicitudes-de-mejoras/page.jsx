@@ -210,23 +210,8 @@ function SolicitudesDeMejorasPage() {
                 onClick={() => setShowNewPostModal(true)}
                 className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors"
               >
-                Nueva Solicitud
+                Nueva Publicación
               </button>
-              {posts.length === 0 && (
-                <button
-                  onClick={async () => {
-                    try {
-                      await seedData()
-                      console.log('Datos de ejemplo creados')
-                    } catch (error) {
-                      console.error('Error creando datos:', error)
-                    }
-                  }}
-                  className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-medium transition-colors"
-                >
-                  Agregar Datos de Ejemplo
-                </button>
-              )}
             </div>
 
             {/* Dropdown de filtros */}
@@ -293,12 +278,6 @@ function SolicitudesDeMejorasPage() {
               <p className="text-gray-600 dark:text-gray-400 mb-4">
                 Sé el primero en compartir una solicitud de mejora
               </p>
-              <button
-                onClick={() => setShowNewPostModal(true)}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors"
-              >
-                Crear primera publicación
-              </button>
             </div>
           ) : (
             filteredPosts.map((post) => (

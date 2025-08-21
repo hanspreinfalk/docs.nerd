@@ -96,7 +96,17 @@ export function WelcomePage() {
     }
     else if (title === "Empezando en Nerd.lat"){
       window.location.href = '/empezando-en-nerd'
-    } else {
+    } 
+    else if (title === "Integraciones") {
+      window.location.href = '/integraciones'
+    }
+    else if (title === "Casos de Uso") {
+      window.open('/casos-de-uso', '_blank')
+    }
+    else if (title === "Glosario") {
+      window.open('/glosario', '_blank')
+    }
+    else {
       updateTitle(title)
     }
   }
@@ -147,21 +157,12 @@ export function WelcomePage() {
           </div>
         </div>
 
-        {/* Card 2 */}
-        <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700 h-[180px] flex flex-col">
-          <div className="space-y-3 flex flex-col h-full">
-            <div className="w-12 h-12 flex items-center justify-center">
-              <svg className="w-8 h-8" style={{color: '#5DD73F'}} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <h1 className="text-lg font-semibold text-black dark:text-white flex-shrink-0">Características</h1>
-            <p className="text-sm text-black dark:text-gray-300 flex-grow">Funciones principales de Nerd</p>
-          </div>
-        </div>
 
         {/* Card 3 */}
-        <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700 h-[180px] flex flex-col">
+        <div 
+          className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700 h-[180px] flex flex-col cursor-pointer hover:shadow-lg transition-shadow"
+          onClick={() => handleCardClick("Integraciones")}
+        >
           <div className="space-y-3 flex flex-col h-full">
             <div className="w-12 h-12 flex items-center justify-center">
               <svg className="w-8 h-8" style={{color: '#5DD73F'}} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -211,7 +212,10 @@ export function WelcomePage() {
         </div>
 
         {/* Card 6 */}
-        <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700 h-[180px] flex flex-col relative">
+        <div 
+          className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700 h-[180px] flex flex-col relative cursor-pointer hover:shadow-lg transition-shadow"
+          onClick={() => handleCardClick("Casos de Uso")}
+        >
           <div className="absolute top-2 right-2">
             <svg className="w-4 h-4 text-gray-400 dark:text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -229,7 +233,10 @@ export function WelcomePage() {
         </div>
 
         {/* Card 7 */}
-        <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700 h-[180px] flex flex-col relative">
+        <div 
+          className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700 h-[180px] flex flex-col relative cursor-pointer hover:shadow-lg transition-shadow"
+          onClick={() => handleCardClick("Glosario")}
+        >
           <div className="absolute top-2 right-2">
             <svg className="w-4 h-4 text-gray-400 dark:text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -246,7 +253,7 @@ export function WelcomePage() {
           </div>
         </div>
 
-        {/* Card 8 */}
+        {/* Card 8
         <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700 h-[180px] flex flex-col relative">
           <div className="absolute top-2 right-2">
             <svg className="w-4 h-4 text-gray-400 dark:text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -265,7 +272,7 @@ export function WelcomePage() {
         </div>
 
         {/* Card 9 */}
-        <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700 h-[180px] flex flex-col relative">
+        {/* <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700 h-[180px] flex flex-col relative">
           <div className="absolute top-2 right-2">
             <svg className="w-4 h-4 text-gray-400 dark:text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -280,7 +287,7 @@ export function WelcomePage() {
             <h1 className="text-lg font-semibold text-black dark:text-white flex-shrink-0">Lanzado</h1>
             <p className="text-sm text-black dark:text-gray-300 flex-grow">¡Compite por créditos gratis cada semana!</p>
           </div>
-        </div>
+        </div> */} 
       </div>
     </div>
 
