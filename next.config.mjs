@@ -3,9 +3,7 @@ const nextConfig = {
   env: {
     RESEND_API: process.env.RESEND_API,
   },
-  experimental: {
-    serverComponentsExternalPackages: ['resend'],
-  },
+  serverExternalPackages: ['resend'],
 };
 
 export default nextConfig;

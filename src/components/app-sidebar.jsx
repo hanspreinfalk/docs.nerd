@@ -49,6 +49,11 @@ const data = {
       icon: Rocket,
     },
     {
+      title: "Sistema de Pagos",
+      url: "/pagos",
+      icon: Banknote,
+    },
+    {
       title: "Planes y tokens",
       url: "/planes-y-tokens",
       icon: Banknote,
