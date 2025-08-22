@@ -30,7 +30,7 @@ export const metadata = {
     description: "Descubre cómo usar Nerd.lat de manera efectiva. Guías, consejos, trucos y todo lo que necesitas para aprovechar al máximo esta herramienta de IA.",
     images: [
       {
-        url: "/marketing/socialmedia.png",
+        url: "https://docs.nerd.lat/marketing/socialmedia.png",
         width: 1200,
         height: 630,
         alt: "Nerd.lat Learn - Aprende a usar Nerd.lat",
@@ -44,7 +44,7 @@ export const metadata = {
     creator: "@nerdlat",
     title: "Nerd.lat Learn - Aprende a usar Nerd.lat",
     description: "Descubre cómo usar Nerd.lat de manera efectiva. Guías, consejos, trucos y todo lo que necesitas para aprovechar al máximo esta herramienta de IA.",
-    images: ["/marketing/socialmedia.png"],
+    images: ["https://docs.nerd.lat/marketing/socialmedia.png"],
   },
   other: {
     "theme-color": "#000000",
