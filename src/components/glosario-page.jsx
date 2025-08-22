@@ -128,7 +128,7 @@ export function GlosarioPage() {
           
           <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700 mb-6">
             <div className="space-y-4">
-              <div className="border-l-4 border-green-500 pl-4">
+{/* <              <div className="border-l-4 border-green-500 pl-4">
                 <h3 className="font-semibold text-black dark:text-white">Modo Chat</h3>
                 <p className="text-sm text-gray-600 dark:text-gray-300">Nerd.lat va más allá de solo generar código; se convierte en un asistente interactivo que te guía a través de cada fase del desarrollo. Ayuda a los fundadores a pensar críticamente, planificar efectivamente, depurar inteligentemente y lanzar con confianza.</p>
               </div>
@@ -146,7 +146,7 @@ export function GlosarioPage() {
               <div className="border-l-4 border-green-500 pl-4">
                 <h3 className="font-semibold text-black dark:text-white">Conocimiento</h3>
                 <p className="text-sm text-gray-600 dark:text-gray-300">Captura detalles esenciales del proyecto en un documento vivo que evoluciona con tu app.</p>
-              </div>
+              </div>> */}
               
               <div className="border-l-4 border-green-500 pl-4">
                 <h3 className="font-semibold text-black dark:text-white">Vista Previa</h3>
@@ -154,8 +154,8 @@ export function GlosarioPage() {
               </div>
               
               <div className="border-l-4 border-green-500 pl-4">
-                <h3 className="font-semibold text-black dark:text-white">Diff</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-300">Una comparación que muestra las diferencias entre dos versiones de un archivo o código.</p>
+                <h3 className="font-semibold text-black dark:text-white">Restaurar Versión</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-300">Restaura una versión específica de tu proyecto borrando tu versión actual.</p>
               </div>
             </div>
           </div>
@@ -175,10 +175,6 @@ export function GlosarioPage() {
                 <p className="text-sm text-gray-600 dark:text-gray-300">Una versión de un producto con las características mínimas necesarias para satisfacer a los primeros usuarios y validar una idea antes del desarrollo a gran escala.</p>
               </div>
               
-              <div className="border-l-4 border-purple-500 pl-4">
-                <h4 className="font-semibold text-black dark:text-white">Hoja de Ruta</h4>
-                <p className="text-sm text-gray-600 dark:text-gray-300">Un plan estratégico de alto nivel que describe la visión, dirección y características planificadas para un producto a lo largo del tiempo.</p>
-              </div>
               
               <div className="border-l-4 border-purple-500 pl-4">
                 <h4 className="font-semibold text-black dark:text-white">Historia de Usuario</h4>
@@ -195,19 +191,10 @@ export function GlosarioPage() {
           <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700 mb-6">
             <h3 className="font-semibold text-black dark:text-white mb-3">Conceptos de Ingeniería</h3>
             <div className="space-y-4">
-              <div className="border-l-4 border-orange-500 pl-4">
-                <h4 className="font-semibold text-black dark:text-white">PRD (Documento de Requisitos de Producto)</h4>
-                <p className="text-sm text-gray-600 dark:text-gray-300">Un documento integral que describe los objetivos, características y especificaciones de un producto para guiar el desarrollo.</p>
-              </div>
               
               <div className="border-l-4 border-orange-500 pl-4">
                 <h4 className="font-semibold text-black dark:text-white">API (Interfaz de Programación de Aplicaciones)</h4>
                 <p className="text-sm text-gray-600 dark:text-gray-300">Una forma para que diferentes servicios se comuniquen. Los tipos más comunes son las APIs REST y las APIs GraphQL.</p>
-              </div>
-              
-              <div className="border-l-4 border-orange-500 pl-4">
-                <h4 className="font-semibold text-black dark:text-white">Refactorizar</h4>
-                <p className="text-sm text-gray-600 dark:text-gray-300">El proceso de reestructurar código existente sin cambiar su comportamiento externo para mejorar la legibilidad, mantenibilidad o rendimiento.</p>
               </div>
             </div>
           </div>
@@ -302,37 +289,6 @@ export function GlosarioPage() {
               <div className="border-l-4 border-indigo-500 pl-4">
                 <h4 className="font-semibold text-black dark:text-white">RLS (Seguridad a Nivel de Fila)</h4>
                 <p className="text-sm text-gray-600 dark:text-gray-300">Una característica en bases de datos que permite controlar el acceso a filas específicas en una tabla basado en roles de usuario o atributos.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Seguridad y Autenticación */}
-        <div id="seguridad-autenticacion" className="w-full max-w-3xl mt-6 px-4 lg:px-6">
-          <h2 className="text-lg font-semibold text-black dark:text-white mb-4">
-            Seguridad y Autenticación
-          </h2>
-          
-          <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700 mb-6">
-            <div className="space-y-4">
-              <div className="border-l-4 border-red-500 pl-4">
-                <h4 className="font-semibold text-black dark:text-white">OAuth</h4>
-                <p className="text-sm text-gray-600 dark:text-gray-300">Un protocolo de autenticación ampliamente utilizado que permite a los usuarios iniciar sesión en aplicaciones usando servicios de terceros como Google, Facebook o GitHub.</p>
-              </div>
-              
-              <div className="border-l-4 border-red-500 pl-4">
-                <h4 className="font-semibold text-black dark:text-white">Autenticación de Dos Factores (2FA)</h4>
-                <p className="text-sm text-gray-600 dark:text-gray-300">Una medida de seguridad que requiere que los usuarios proporcionen dos formas de identificación antes de acceder a una cuenta.</p>
-              </div>
-              
-              <div className="border-l-4 border-red-500 pl-4">
-                <h4 className="font-semibold text-black dark:text-white">CORS (Compartir Recursos de Origen Cruzado)</h4>
-                <p className="text-sm text-gray-600 dark:text-gray-300">Una política de seguridad que controla qué sitios web o aplicaciones pueden acceder a recursos en un servidor.</p>
-              </div>
-              
-              <div className="border-l-4 border-red-500 pl-4">
-                <h4 className="font-semibold text-black dark:text-white">Proveedor de Autenticación</h4>
-                <p className="text-sm text-gray-600 dark:text-gray-300">Una entidad o servicio que verifica las credenciales de usuario, permitiendo acceso seguro a aplicaciones o sistemas.</p>
               </div>
             </div>
           </div>

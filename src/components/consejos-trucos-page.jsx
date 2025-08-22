@@ -80,7 +80,7 @@ export function ConsejosTrucosPage() {
     { id: 'introduccion', title: 'Mejores Prácticas' },
     { id: 'fundacion', title: '1. Establece tu Fundación' },
     { id: 'prompting', title: '2. Mejores Prácticas de Prompting' },
-    { id: 'chat-mode', title: '3. Usa el Modo Chat' },
+    { id: 'interaccion-ia', title: '3. Interactúa Efectivamente con la IA' },
     { id: 'supabase', title: '4. Evita Problemas con Supabase' },
     { id: 'visual-edit', title: '5. Usa la Edición Visual' },
     { id: 'github', title: '6. Usa GitHub y Control de Versiones' },
@@ -121,10 +121,10 @@ export function ConsejosTrucosPage() {
             </ul>
           </div>
           <p className="text-sm text-black dark:text-gray-300 mb-3">
-            Puedes generar automáticamente un archivo de Conocimiento a través del Modo Chat:
+            Puedes generar automáticamente un archivo de Conocimiento con un prompt directo:
           </p>
           <div className="bg-gray-50 dark:bg-gray-800 rounded p-3 text-sm font-mono text-black dark:text-gray-300">
-            <p>Genera conocimiento para mi proyecto en T=0 basado en las características que ya he implementado.</p>
+            <p>Genera documentación de conocimiento para mi proyecto basado en las características que ya he implementado.</p>
           </div>
         </div>
 
@@ -137,41 +137,7 @@ export function ConsejosTrucosPage() {
           </p>
           
           <div className="space-y-4">
-            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
-              <h3 className="font-semibold text-black dark:text-white mb-3">Consejos de Prompting:</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <span className="text-blue-600 dark:text-blue-400 mr-2 mt-1">•</span>
-                  <div>
-                    <strong>Sé específico:</strong> Menciona la página exacta (ej. /dashboard) y el comportamiento esperado.
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-600 dark:text-blue-400 mr-2 mt-1">•</span>
-                  <div>
-                    <strong>Usa lenguaje natural:</strong>
-                    <div className="bg-gray-50 dark:bg-gray-800 rounded p-2 mt-2 text-sm font-mono text-black dark:text-gray-300">
-                      Quiero que los usuarios con rol Inversor accedan a este componente, pero no los Admins.
-                    </div>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-600 dark:text-blue-400 mr-2 mt-1">•</span>
-                  <div>
-                    <strong>Agrega capturas de pantalla:</strong> Especialmente útil para describir bugs o problemas de UX.
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-600 dark:text-blue-400 mr-2 mt-1">•</span>
-                  <div>
-                    <strong>Agrega barreras de protección:</strong> Dile a la IA qué no tocar. Ej:
-                    <div className="bg-gray-50 dark:bg-gray-800 rounded p-2 mt-2 text-sm font-mono text-black dark:text-gray-300">
-                      No edites /shared/Layout.tsx.
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
+
 
             <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
               <h3 className="font-semibold text-black dark:text-white mb-3">Plantilla de Desglose de Características:</h3>
@@ -186,28 +152,28 @@ export function ConsejosTrucosPage() {
           </div>
         </div>
 
-        <div id="chat-mode" className="w-full max-w-3xl mt-6 px-4 lg:px-6">
+        <div id="interaccion-ia" className="w-full max-w-3xl mt-6 px-4 lg:px-6">
           <h2 className="text-lg font-semibold text-black dark:text-white mb-4">
-            3. Usa el Modo Chat Temprano y Frecuentemente
+            3. Interactúa Efectivamente con la IA
           </h2>
           <p className="text-base text-black dark:text-white lg:text-lg mb-4">
-            Modo Chat = tu co-piloto de IA. Te ayuda a depurar, hacer lluvia de ideas y planificar implementaciones, sin editar tu código hasta que estés listo.
+            La IA es tu asistente de desarrollo que responde directamente a tus instrucciones. Te ayuda a depurar, implementar características y optimizar código basándose en los prompts que le proporciones.
           </p>
           
           <div className="space-y-4">
             <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
-              <h3 className="font-semibold text-black dark:text-white mb-3">Cuándo cambiar al Modo Chat:</h3>
+              <h3 className="font-semibold text-black dark:text-white mb-3">Cuándo solicitar ayuda de planificación:</h3>
               <ul className="space-y-2 text-sm text-black dark:text-gray-300">
-                <li>• Después de 2-3 intentos fallidos de "Intentar Arreglar"</li>
+                <li>• Después de 2-3 intentos fallidos de implementación</li>
                 <li>• Al depurar lógica compleja o problemas de base de datos</li>
-                <li>• Al planificar nuevas características</li>
+                <li>• Al planificar nuevas características antes de implementarlas</li>
               </ul>
             </div>
 
             <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
               <h3 className="font-semibold text-black dark:text-white mb-3">Consejo de Flujo de Trabajo:</h3>
               <p className="text-sm text-black dark:text-gray-300 mb-3">
-                Algunos usuarios prefieren usar el Modo Chat para 60-70% de su tiempo. Solo haz clic en "Implementar el plan" cuando estés completamente satisfecho.
+                Algunos usuarios prefieren planificar primero con prompts exploratorios antes de dar instrucciones de implementación definitivas.
               </p>
               <div className="bg-gray-50 dark:bg-gray-800 rounded p-3 text-sm font-mono text-black dark:text-gray-300">
                 <p>En la página /settings, implementa [característica]. El comportamiento esperado es [XYZ]. Por favor no toques el componente A, layout B, o lógica compartida a menos que sea necesario.</p>
@@ -234,7 +200,7 @@ export function ConsejosTrucosPage() {
                 <li>• Si debes revertir, pídele a la IA:</li>
               </ul>
               <div className="bg-gray-50 dark:bg-gray-800 rounded p-3 mt-3 text-sm font-mono text-black dark:text-gray-300">
-                <p>Por favor valida el esquema SQL en T=0 y asegúrate de que no hayan ocurrido cambios que rompan la funcionalidad.</p>
+                <p>Por favor valida el esquema SQL actual y asegúrate de que no hayan ocurrido cambios que rompan la funcionalidad.</p>
               </div>
               <p className="text-sm text-black dark:text-gray-300 mt-3">
                 Siempre prueba características vinculadas a la base de datos antes de publicar.
@@ -272,7 +238,7 @@ export function ConsejosTrucosPage() {
                 <li>• Después de cada bug: Compara versiones visualmente</li>
               </ul>
               <div className="bg-gray-50 dark:bg-gray-800 rounded p-3 mt-3 text-sm font-mono text-black dark:text-gray-300">
-                <p>Compara la versión en T-1 con T-0. ¿Qué cambió? ¿Qué podría estar rompiendo?</p>
+                <p>Compara la versión anterior con la actual. ¿Qué cambió? ¿Qué podría estar rompiendo?</p>
               </div>
             </div>
           </div>
@@ -289,7 +255,7 @@ export function ConsejosTrucosPage() {
           <div className="space-y-4">
             <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
               <p className="text-sm text-black dark:text-gray-300 mb-3">
-                Remix crea una copia limpia de tu proyecto en T=0.
+                Remix crea una copia limpia de tu proyecto desde su estado inicial.
               </p>
               <ul className="space-y-2 text-sm text-black dark:text-gray-300">
                 <li>• Reconstruye con mejor prompting + conocimiento más claro</li>

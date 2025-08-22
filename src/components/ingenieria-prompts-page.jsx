@@ -208,7 +208,7 @@ export function IngenieriaPromptsPage() {
             <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
               <h3 className="font-semibold text-black dark:text-white mb-2">Adaptativo</h3>
               <p className="text-sm text-black dark:text-gray-300 mb-3">
-                No te conformes con la primera respuesta si no es perfecta. Los prompts se pueden refinar iterativamente. Una gran ventaja de la IA de Nerd.lat es que puedes tener un diálogo.
+                No te conformes con la primera respuesta si no es perfecta. Los prompts se pueden refinar iterativamente. Una gran ventaja de la IA de Nerd.lat es que puedes refinar tus instrucciones basándote en los resultados previos.
               </p>
             </div>
 
@@ -244,12 +244,12 @@ export function IngenieriaPromptsPage() {
             </div>
 
             <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
-              <h3 className="font-semibold text-black dark:text-white mb-3">2. Prompting Conversacional (Sin Ruedas de Entrenamiento)</h3>
+              <h3 className="font-semibold text-black dark:text-white mb-3">2. Prompting Directo (Sin Ruedas de Entrenamiento)</h3>
               <p className="text-sm text-black dark:text-gray-300 mb-3">
-                A medida que te sientas cómodo, no siempre necesitarás una estructura tan rígida. El prompting conversacional significa que puedes escribir a la IA de manera más natural, similar a cómo explicarías una tarea a un colega, mientras mantienes claridad y completitud.
+                A medida que te sientas cómodo, no siempre necesitarás una estructura tan rígida. El prompting directo significa que puedes escribir instrucciones a la IA de manera más natural, similar a cómo explicarías una tarea a un colega, mientras mantienes claridad y completitud.
               </p>
               <div className="bg-gray-50 dark:bg-gray-800 rounded p-3 text-sm font-mono text-black dark:text-gray-300">
-                <p>Ejemplo: "Construyamos una función para subir una foto de perfil. Debe incluir un formulario con un input de archivo de imagen y un botón de envío. Cuando se envíe, debe almacenar la imagen en Supabase storage y actualizar el perfil del usuario..."</p>
+                <p>Ejemplo: "Construye una función para subir una foto de perfil. Debe incluir un formulario con un input de archivo de imagen y un botón de envío. Cuando se envíe, debe almacenar la imagen en Supabase storage y actualizar el perfil del usuario..."</p>
               </div>
             </div>
 
@@ -369,13 +369,13 @@ export function IngenieriaPromptsPage() {
             </div>
 
             <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
-              <h3 className="font-semibold text-black dark:text-white mb-3">Usa los Modos de Nerd.lat Intencionalmente</h3>
+              <h3 className="font-semibold text-black dark:text-white mb-3">Usa Prompts de Planificación y Ejecución</h3>
               <p className="text-sm text-black dark:text-gray-300 mb-3">
-                Utiliza el Modo Chat para planificar y el Modo Predeterminado para construir. Por ejemplo, cuando comiences una nueva función, podrías entrar al Modo Chat y hacer lluvia de ideas sobre la descomposición de componentes.
+                Utiliza prompts exploratorios para planificar y prompts específicos para construir. Por ejemplo, cuando comiences una nueva función, podrías primero hacer lluvia de ideas sobre la descomposición de componentes.
               </p>
               <div className="bg-gray-50 dark:bg-gray-800 rounded p-3 text-sm font-mono text-black dark:text-gray-300">
-                <p><strong>Modo Chat:</strong> "Quiero agregar una sección de blog a mi aplicación. Discutamos cómo estructurar los datos y páginas."</p>
-                <p><strong>Modo Predeterminado:</strong> "Crea una página BlogPost y una tabla o esquema de Supabase para posts de blog basado en el plan anterior."</p>
+                <p><strong>Planificación:</strong> "Quiero agregar una sección de blog a mi aplicación. ¿Cómo estructurarías los datos y páginas? Dame un plan detallado."</p>
+                <p><strong>Ejecución:</strong> "Crea una página BlogPost y una tabla o esquema de Supabase para posts de blog basado en el plan que me diste."</p>
               </div>
             </div>
           </div>
@@ -393,7 +393,7 @@ export function IngenieriaPromptsPage() {
             <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
               <h3 className="font-semibold text-black dark:text-white mb-2">En el Constructor de Nerd.lat</h3>
               <p className="text-sm text-black dark:text-gray-300">
-                Principalmente usarás estos prompts en la interfaz de chat de Nerd.lat para construir y refinar tu aplicación. Comienza con un prompt de proyecto amplio, luego itera función por función. Usa el Modo Solo-Chat cuando necesites discutir o depurar sin cambiar código.
+                Principalmente usarás estos prompts en la interfaz de Nerd.lat para construir y refinar tu aplicación. Comienza con un prompt de proyecto amplio, luego itera función por función. Usa prompts exploratorios cuando necesites planificar o entender mejor el problema antes de implementar.
               </p>
             </div>
 

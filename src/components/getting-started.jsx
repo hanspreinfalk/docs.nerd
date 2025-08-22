@@ -323,7 +323,7 @@ export function GettingStartedPage() {
 
   const faqData2 = [
     {
-      question: "Prompt",
+      question: "Tu Primer Prompt",
       answer: (
         <div className="space-y-4">
           <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
@@ -342,12 +342,6 @@ export function GettingStartedPage() {
           </div>
         </div>
       )
-    },
-    {
-      question: "Como Editar tu Proyecto",
-    },
-    {
-      question: "Como Publicar tu Proyecto",
     },
   ]
 
@@ -419,7 +413,7 @@ export function GettingStartedPage() {
           ))}
         </div>
       </div>
-      <div id="edita-proyecto" className="w-full max-w-3xl mt-6 px-4 lg:px-6">
+      {/* <div id="edita-proyecto" className="w-full max-w-3xl mt-6 px-4 lg:px-6">
         <h2 className="text-2xl font-bold tracking-tight lg:text-2xl text-left mb-6 text-black dark:text-white">
           Edita tu Proyecto
         </h2>
@@ -434,8 +428,8 @@ export function GettingStartedPage() {
             />
           ))}
         </div>
-      </div>
-      <div id="publica-proyecto" className="w-full max-w-3xl mt-6 px-4 lg:px-6">
+      </div> */}
+      {/* <div id="publica-proyecto" className="w-full max-w-3xl mt-6 px-4 lg:px-6">
         <h2 className="text-2xl font-bold tracking-tight lg:text-2xl text-left mb-6 text-black dark:text-white">
           Publica tu Proyecto
         </h2>
@@ -450,7 +444,7 @@ export function GettingStartedPage() {
             />
           ))}
         </div>
-      </div>
+      </div> */}
       
     </div>
     </>

@@ -78,10 +78,7 @@ function CasosDeUsoTableOfContents({ sections }) {
 export function CasosDeUsoPage() {
   const sections = [
     { id: 'inspiracion', title: 'Tiempo de Inspiración' },
-    { id: 'landing-pages', title: 'Páginas de Aterrizaje' },
-    { id: 'plataformas-educativas', title: 'Plataformas Educativas' },
-    { id: 'productos-fullstack', title: 'Productos Full-stack' },
-    { id: 'juegos', title: 'Juegos' }
+    { id: 'proyectos-credito', title: 'Proyectos de Crédito' }
   ]
 
   return (
@@ -105,176 +102,53 @@ export function CasosDeUsoPage() {
           </div>
         </div>
 
-        <div id="landing-pages" className="w-full max-w-3xl mt-6 px-4 lg:px-6">
+        <div id="proyectos-credito" className="w-full max-w-3xl mt-6 px-4 lg:px-6">
           <h2 className="text-lg font-semibold text-black dark:text-white mb-4">
-            Páginas de Aterrizaje
+            Proyectos de Crédito
           </h2>
           
           <div className="space-y-4">
             <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
               <div className="space-y-4">
                 <div className="border-l-4 border-green-500 pl-4">
-                  <h3 className="font-semibold text-black dark:text-white">Dream Catcher</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">Registra, analiza y descubre patrones en tus sueños.</p>
+                  <h3 className="font-semibold text-black dark:text-white">
+                    <a 
+                      href="https://silly-kashata-0611c7.netlify.app/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 underline"
+                    >
+                      Página Web de Promoción de Crédito
+                    </a>
+                  </h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">Sitio web promocional para servicios de crédito construido con Nerd.lat.</p>
                 </div>
                 
-                <div className="border-l-4 border-green-500 pl-4">
-                  <h3 className="font-semibold text-black dark:text-white">Awaken Ambiance</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">IA de voz en tiempo real que responde de manera natural.</p>
-                </div>
-                
-                <div className="border-l-4 border-green-500 pl-4">
-                  <h3 className="font-semibold text-black dark:text-white">Alpine Ventures</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">Inversionista en fundadores obsesionados con el producto.</p>
-                </div>
-                
-                <div className="border-l-4 border-green-500 pl-4">
-                  <h3 className="font-semibold text-black dark:text-white">PrintPigeon</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">Envía cartas en línea con facilidad.</p>
+                <div className="border-l-4 border-blue-500 pl-4">
+                  <h3 className="font-semibold text-black dark:text-white">
+                    <a 
+                      href="https://credit-simulator-j97-0ezxm8b1.nerdlat.com/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 underline"
+                    >
+                      Simulador de Crédito
+                    </a>
+                  </h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">Herramienta interactiva para simular diferentes escenarios de crédito y préstamos.</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div id="plataformas-educativas" className="w-full max-w-3xl mt-6 px-4 lg:px-6">
-          <h2 className="text-lg font-semibold text-black dark:text-white mb-4">
-            Plataformas Educativas
-          </h2>
-          
-          <div className="space-y-4">
-            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
-              <div className="space-y-4">
-                <div className="border-l-4 border-blue-500 pl-4">
-                  <h3 className="font-semibold text-black dark:text-white">Vpromise</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">Herramientas interactivas y soluciones innovadoras para la educación moderna.</p>
-                </div>
-                
-                <div className="border-l-4 border-blue-500 pl-4">
-                  <h3 className="font-semibold text-black dark:text-white">Backchannel</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">Sistema que revoluciona la búsqueda de empleo.</p>
-                </div>
-                
-                <div className="border-l-4 border-blue-500 pl-4">
-                  <h3 className="font-semibold text-black dark:text-white">CAR33R</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">Mercado de contratación impulsado por criptomonedas.</p>
-                </div>
-                
-                <div className="border-l-4 border-blue-500 pl-4">
-                  <h3 className="font-semibold text-black dark:text-white">Eva</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">Recibe tus recomendaciones personalizadas de IA.</p>
-                </div>
-                
-                <div className="border-l-4 border-blue-500 pl-4">
-                  <h3 className="font-semibold text-black dark:text-white">SkillStep</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">Ayuda a las mujeres a encontrar trabajos seguros y educación en Europa.</p>
-                </div>
-                
-                <div className="border-l-4 border-blue-500 pl-4">
-                  <h3 className="font-semibold text-black dark:text-white">CodeLearn</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">Plataforma interactiva para aprender programación a través de proyectos prácticos.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div id="productos-fullstack" className="w-full max-w-3xl mt-6 px-4 lg:px-6">
-          <h2 className="text-lg font-semibold text-black dark:text-white mb-4">
-            Productos Full-stack
-          </h2>
-          
-          <div className="space-y-4">
-            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
-              <div className="space-y-4">
-                <div className="border-l-4 border-purple-500 pl-4">
-                  <h3 className="font-semibold text-black dark:text-white">LOOK AI <span className="text-green-600">(recaudó $500K)</span></h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">Búsqueda asistida por IA para ropa construida con Nerd.lat.</p>
-                </div>
-                
-                <div className="border-l-4 border-purple-500 pl-4">
-                  <h3 className="font-semibold text-black dark:text-white">Wiktok</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">TikTok para páginas de Wikipedia.</p>
-                </div>
-                
-                <div className="border-l-4 border-purple-500 pl-4">
-                  <h3 className="font-semibold text-black dark:text-white">BluePrintA</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">Simplifica el desarrollo de productos.</p>
-                </div>
-                
-                <div className="border-l-4 border-purple-500 pl-4">
-                  <h3 className="font-semibold text-black dark:text-white">Wildcard AI <span className="text-orange-600">(YC)</span></h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">API de selección inteligente de herramientas para agentes de IA.</p>
-                </div>
-                
-                <div className="border-l-4 border-purple-500 pl-4">
-                  <h3 className="font-semibold text-black dark:text-white">BlueMint AI</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">IA que transforma ideas de productos en especificaciones detalladas listas para desarrolladores.</p>
-                </div>
-                
-                <div className="border-l-4 border-purple-500 pl-4">
-                  <h3 className="font-semibold text-black dark:text-white">Stardust Analytics</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">Ayuda a propietarios de tiendas Shopify a encontrar el KPI exacto que bloquea su crecimiento.</p>
-                </div>
-                
-                <div className="border-l-4 border-purple-500 pl-4">
-                  <h3 className="font-semibold text-black dark:text-white">Access AI</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">Transforma cualquier sitio en una experiencia interactiva por voz.</p>
-                </div>
-                
-                <div className="border-l-4 border-purple-500 pl-4">
-                  <h3 className="font-semibold text-black dark:text-white">HealthSync</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">Plataforma de gestión que integra información con seguimiento de salud personal.</p>
-                </div>
-                
-                <div className="border-l-4 border-purple-500 pl-4">
-                  <h3 className="font-semibold text-black dark:text-white">ChatPDF</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">Habla con tus documentos de manera natural.</p>
-                </div>
-                
-                <div className="border-l-4 border-purple-500 pl-4">
-                  <h3 className="font-semibold text-black dark:text-white">RaiseFlow</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">Un CRM para inversores.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div id="juegos" className="w-full max-w-3xl mt-6 px-4 lg:px-6">
-          <h2 className="text-lg font-semibold text-black dark:text-white mb-4">
-            Juegos
-          </h2>
-          
-          <div className="space-y-4">
-            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
-              <div className="space-y-4">
-                <div className="border-l-4 border-red-500 pl-4">
-                  <h3 className="font-semibold text-black dark:text-white">Echo of the Forge</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">Experiencia narrativa de IA que se adapta a tus decisiones.</p>
-                </div>
-                
-                <div className="border-l-4 border-red-500 pl-4">
-                  <h3 className="font-semibold text-black dark:text-white">Kaleidoscope</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">Texto que genera un espacio 3D.</p>
-                </div>
-                
-                <div className="border-l-4 border-red-500 pl-4">
-                  <h3 className="font-semibold text-black dark:text-white">Color Islands</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">Juego multijugador.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="w-full max-w-3xl mt-6 px-4 lg:px-6">
+        {/* <div className="w-full max-w-3xl mt-6 px-4 lg:px-6">
           <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
             <p className="text-sm text-gray-700 dark:text-gray-300">
               Puedes encontrar más aplicaciones construidas con Nerd.lat en nuestras redes sociales o navegando por 'nerd.lat' en X.
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   )

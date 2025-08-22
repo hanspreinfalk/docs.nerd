@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { SidebarTrigger } from "@/components/ui/sidebar"
@@ -11,6 +12,7 @@ import { SearchOverlay } from "@/components/search-overlay"
 export function SiteHeader() {
   const { currentTitle, updateTitle } = useTitle()
   const { isDarkMode, toggleTheme } = useTheme()
+  const pathname = usePathname()
   const [isSearchOpen, setIsSearchOpen] = useState(false)
 
   // Global keyboard shortcut for search
@@ -26,22 +28,27 @@ export function SiteHeader() {
     return () => document.removeEventListener('keydown', handleKeyDown)
   }, [])
   
+  const getNavUrl = (title) => {
+    const navMapping = {
+      "Introducción": "/",
+      "Integraciones": "/integraciones",
+      "Consejos y Trucos": "/consejos-y-trucos", 
+      "Ingeniería de Prompts": "/ingenieria-prompts-page",
+      "Casos de Uso": "/casos-de-uso",
+      "Glosario": "/glosario"
+    }
+    return navMapping[title] || "/"
+  }
+
+  const isNavActive = (title) => {
+    const url = getNavUrl(title)
+    return pathname === url
+  }
+
   const handleNavClick = (title) => {
-    if (title === "Ingeniería de Prompts") {
-      // Navigate to page in current tab (causes reload)
-      window.location.href = '/ingenieria-prompts-page'
-    } else if (title === "Consejos y Trucos") {
-      // Navigate to page in current tab (causes reload)
-      window.location.href = '/consejos-y-trucos'
-    } else if (title === "Casos de Uso") {
-      // Navigate to page in current tab (causes reload)
-      window.location.href = '/casos-de-uso'
-    } else if (title === "Glosario") {
-      // Navigate to page in current tab (causes reload)
-      window.location.href = '/glosario'
-    } else if (title === "Integraciones") {
-      // Navigate to page in current tab (causes reload)
-      window.location.href = '/integraciones'
+    const url = getNavUrl(title)
+    if (url !== "/") {
+      window.location.href = url
     } else {
       updateTitle(title)
     }
@@ -150,13 +157,66 @@ export function SiteHeader() {
       <header className="hidden md:flex h-12 shrink-0 items-center bg-white dark:bg-black gap-2 border-b border-gray-100 dark:border-gray-800 fixed top-16 left-0 right-0 z-40">
         <div className="flex w-full items-center px-6">
           <nav className="flex items-center space-x-8">
-            <button onClick={() => handleNavClick("Introducción")} className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Introducción</button>
-            <button onClick={() => handleNavClick("Integraciones")} className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Integraciones</button>
-            <button onClick={() => handleNavClick("Consejos y Trucos")} className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Consejos y Trucos</button>
-            <button onClick={() => handleNavClick("Ingeniería de Prompts")} className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Ingeniería de Prompts</button>
-            <button onClick={() => handleNavClick("Casos de Uso")} className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Casos de Uso</button>
-            <button onClick={() => handleNavClick("Glosario")} className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Glosario</button>
-            
+            <button 
+              onClick={() => handleNavClick("Introducción")} 
+              className={`text-sm font-medium transition-colors px-3 py-1 rounded-md ${
+                isNavActive("Introducción") 
+                  ? "bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white font-semibold" 
+                  : "text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50"
+              }`}
+            >
+              Introducción
+            </button>
+            <button 
+              onClick={() => handleNavClick("Integraciones")} 
+              className={`text-sm font-medium transition-colors px-3 py-1 rounded-md ${
+                isNavActive("Integraciones") 
+                  ? "bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white font-semibold" 
+                  : "text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50"
+              }`}
+            >
+              Integraciones
+            </button>
+            <button 
+              onClick={() => handleNavClick("Consejos y Trucos")} 
+              className={`text-sm font-medium transition-colors px-3 py-1 rounded-md ${
+                isNavActive("Consejos y Trucos") 
+                  ? "bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white font-semibold" 
+                  : "text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50"
+              }`}
+            >
+              Consejos y Trucos
+            </button>
+            <button 
+              onClick={() => handleNavClick("Ingeniería de Prompts")} 
+              className={`text-sm font-medium transition-colors px-3 py-1 rounded-md ${
+                isNavActive("Ingeniería de Prompts") 
+                  ? "bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white font-semibold" 
+                  : "text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50"
+              }`}
+            >
+              Ingeniería de Prompts
+            </button>
+            <button 
+              onClick={() => handleNavClick("Casos de Uso")} 
+              className={`text-sm font-medium transition-colors px-3 py-1 rounded-md ${
+                isNavActive("Casos de Uso") 
+                  ? "bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white font-semibold" 
+                  : "text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50"
+              }`}
+            >
+              Casos de Uso
+            </button>
+            <button 
+              onClick={() => handleNavClick("Glosario")} 
+              className={`text-sm font-medium transition-colors px-3 py-1 rounded-md ${
+                isNavActive("Glosario") 
+                  ? "bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white font-semibold" 
+                  : "text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50"
+              }`}
+            >
+              Glosario
+            </button>
           </nav>
         </div>
       </header>
