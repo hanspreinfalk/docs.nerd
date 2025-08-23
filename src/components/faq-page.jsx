@@ -47,170 +47,322 @@ export function FAQPage() {
 
   const faqData = [
     {
-      question: "¿Qué es Nerd.lat?",
+      question: "¿Cómo inicio con NERD.LAT?",
       answer: (
         <div>
-          <p>Nerd.lat es una plataforma de desarrollo de aplicaciones web impulsada por IA que permite crear, editar y desplegar aplicaciones completas directamente desde tu navegador.</p>
-          <p className="mt-2">Utiliza tecnología de inteligencia artificial avanzada para generar código, crear interfaces y manejar la lógica backend de manera automática, facilitando el desarrollo tanto para principiantes como para desarrolladores experimentados.</p>
+          <p>Es súper fácil, solamente tienes que darle en el botón 'Empezar' al entrar a la web, regístrate con tu cuenta de Google y automáticamente ya estarías dentro de la inteligencia artificial. Se te acreditarían tokens gratis diariamente.</p>
         </div>
       )
     },
     {
-      question: "¿Cómo funcionan los créditos en Nerd.lat?",
+      question: "¿Cómo genero código con la plataforma?",
       answer: (
         <div>
-          <p>Los créditos son la moneda interna de Nerd.lat que se utiliza para procesar tus solicitudes de desarrollo. Cada acción que realices (como generar código, crear componentes, o hacer modificaciones) consume una cantidad específica de créditos.</p>
-          <ul className="list-disc list-inside space-y-1 mt-2">
-            <li>Acciones simples: 0.5-0.9 créditos</li>
-            <li>Funcionalidades medianas: 1-2 créditos</li>
-            <li>Proyectos complejos: 2+ créditos</li>
-          </ul>
-          <p className="mt-2">Los créditos se renuevan mensualmente según tu plan de suscripción.</p>
+          <p>Es súper fácil generar código con la plataforma, solamente tienes que indicarle tu idea o prompt de tu aplicación y automáticamente la IA convierte ese prompt de palabras a código.</p>
         </div>
       )
     },
     {
-      question: "¿Cuál es la diferencia entre el plan gratuito y los planes de pago?",
+      question: "¿Cómo creo videojuegos con NERD.LAT?",
       answer: (
         <div>
-          <p><strong>Plan Gratuito:</strong></p>
-          <ul className="list-disc list-inside space-y-1 mt-1 mb-3">
-            <li>5 créditos diarios (máximo 30 por mes)</li>
-            <li>Colaboración básica en workspace</li>
-            <li>Funcionalidades limitadas</li>
-          </ul>
-          <p><strong>Planes de Pago (Pro y Business):</strong></p>
-          <ul className="list-disc list-inside space-y-1 mt-1">
-            <li>Más créditos mensuales (100-10,000+)</li>
-            <li>Proyectos privados</li>
-            <li>Dominios personalizados</li>
-            <li>Modo Code para edición directa</li>
-            <li>Roles y permisos avanzados</li>
-            <li>SSO (solo Business)</li>
-          </ul>
+          <p>NERD.LAT no tiene un modelo específico para crear videojuegos, pero sí puedes crear modelos sencillos. Incluso puede ser en 3D, aunque no es muy viable. Todo depende de la cantidad de código que necesites generar.</p>
         </div>
       )
     },
     {
-      question: "¿Puedo colaborar con mi equipo en Nerd.lat?",
+      question: "¿Cómo descargo mi proyecto?",
       answer: (
         <div>
-          <p>Sí, Nerd.lat está diseñado para la colaboración en equipo. Puedes:</p>
-          <ul className="list-disc list-inside space-y-1 mt-2">
-            <li>Invitar miembros ilimitados a tu workspace (todos los planes)</li>
-            <li>Asignar roles y permisos específicos (planes de pago)</li>
-            <li>Trabajar simultáneamente en proyectos</li>
-            <li>Compartir y revisar código en tiempo real</li>
-            <li>Gestionar proyectos personales dentro del workspace (Business)</li>
-          </ul>
+          <p>Dirígete a tu proyecto, pulsa en el icono de configuración (rueda) y se desplegarán varias opciones. Entre ellas está el botón 'Descargar', que te permitirá bajar todas las dependencias y archivos de tu proyecto.</p>
         </div>
       )
     },
     {
-      question: "¿Cómo puedo ver mis créditos restantes?",
+      question: "¿Cómo ingreso o realizo cambios a mi proyecto?",
       answer: (
         <div>
-          <p>Para visualizar tus créditos disponibles:</p>
-          <ol className="list-decimal list-inside space-y-1 mt-2">
-            <li>Presiona el nombre de tu workspace en el dashboard principal</li>
-            <li>O haz clic en el nombre del proyecto cuando estés en el editor</li>
-          </ol>
-          <p className="mt-2">Verás una barra de créditos que muestra:</p>
-          <ul className="list-disc list-inside space-y-1 mt-1">
-            <li><strong>Área gris:</strong> Créditos ya utilizados</li>
-            <li><strong>Áreas azules:</strong> Diferentes tipos de créditos restantes</li>
-          </ul>
-          <p className="mt-2">Puedes pasar el cursor sobre cada sección para ver detalles específicos.</p>
+          <p>Para realizar cambios, solo indícale a NERD el cambio específico en el chat y envía el mensaje. La IA programará automáticamente los cambios solicitados.</p>
         </div>
       )
     },
     {
-      question: "¿Los créditos no utilizados se acumulan?",
+      question: "¿Puedo editar el código generado por NERD manualmente?",
       answer: (
         <div>
-          <p>Sí, los créditos no utilizados se acumulan automáticamente, pero con límites:</p>
-          <p className="mt-2"><strong>Planes mensuales:</strong></p>
-          <ul className="list-disc list-inside space-y-1 mt-1 mb-2">
-            <li>Acumulación hasta el límite de créditos mensuales</li>
-            <li>Validez de 1 mes después de ser agregados</li>
-          </ul>
-          <p><strong>Planes anuales:</strong></p>
-          <ul className="list-disc list-inside space-y-1 mt-1 mb-2">
-            <li>Acumulación hasta 12 veces el límite mensual</li>
-            <li>Validez de 12 meses después de ser agregados</li>
-          </ul>
-          <p className="text-sm bg-yellow-50 dark:bg-yellow-900/30 border border-yellow-200 dark:border-yellow-700 rounded p-2 mt-2 text-black dark:text-yellow-200">
-            <strong>Importante:</strong> Los créditos diarios no se acumulan, y al cancelar la suscripción, todos los créditos acumulados expiran.
-          </p>
+          <p>Sí puedes verlo y modificarlo, pero los cambios no se pueden guardar porque el código solo lo puede manipular la IA.</p>
         </div>
       )
     },
     {
-      question: "¿Puedo conectar mi propio dominio?",
+      question: "¿Qué tipo de proyectos puedo crear con NERD.LAT?",
       answer: (
         <div>
-          <p>Sí, con los planes de pago (Pro y Business) puedes conectar dominios personalizados a tus proyectos.</p>
-          <p className="mt-2">Esta funcionalidad te permite:</p>
-          <ul className="list-disc list-inside space-y-1 mt-1">
-            <li>Usar tu propia marca y dominio</li>
-            <li>Mantener una presencia profesional</li>
-            <li>Controlar completamente la URL de tu aplicación</li>
-            <li>Remover la insignia "Edit with Nerd.lat"</li>
-          </ul>
+          <p>Puedes crear aplicaciones web, videojuegos y más. Próximamente también podrás generar APKs o software con NERD.LAT.</p>
         </div>
       )
     },
     {
-      question: "¿Qué es el modo Code?",
+      question: "¿Se puede trabajar en equipo dentro de un mismo proyecto?",
       answer: (
         <div>
-          <p>El modo Code es una funcionalidad exclusiva de los planes de pago que te permite editar directamente el código de tu aplicación.</p>
-          <p className="mt-2">Con el modo Code puedes:</p>
-          <ul className="list-disc list-inside space-y-1 mt-1">
-            <li>Acceder y modificar el código fuente directamente</li>
-            <li>Hacer ajustes finos que la IA podría no entender</li>
-            <li>Integrar librerías y dependencias personalizadas</li>
-            <li>Tener control total sobre la implementación</li>
-          </ul>
+          <p>Próximamente será posible. Se desplegará un modelo de colaboración donde podrás invitar a varias personas a tu proyecto mediante correo electrónico.</p>
         </div>
       )
     },
     {
-      question: "¿Cómo funciona la facturación anual vs mensual?",
+      question: "¿NERD.LAT es gratis o necesito tokens para todo?",
       answer: (
         <div>
-          <p>Nerd.lat ofrece opciones de facturación flexible:</p>
-          <p className="mt-2"><strong>Facturación Mensual:</strong></p>
-          <ul className="list-disc list-inside space-y-1 mt-1 mb-2">
-            <li>Pago mes a mes</li>
-            <li>Mayor flexibilidad para cambios</li>
-            <li>Precio mensual estándar</li>
-          </ul>
-          <p><strong>Facturación Anual:</strong></p>
-          <ul className="list-disc list-inside space-y-1 mt-1 mb-2">
-            <li>Descuento significativo (generalmente ~15-20%)</li>
-            <li>Límites más altos de acumulación de créditos</li>
-            <li>Créditos válidos por 12 meses</li>
-            <li>Un solo pago anual</li>
-          </ul>
+          <p>NERD.LAT es gratis diariamente, otorgando entre 250.000 y 500.000 tokens. También hay planes de pago con más tokens y acceso a distintos modelos de IA.</p>
         </div>
       )
     },
     {
-      question: "¿Qué sucede si cancelo mi suscripción?",
+      question: "¿Cómo integro la base de datos en mi proyecto?",
       answer: (
         <div>
-          <p>Al cancelar tu suscripción de pago:</p>
-          <ul className="list-disc list-inside space-y-1 mt-2">
-            <li>Mantienes acceso hasta el final del período de facturación actual</li>
-            <li>Todos los créditos no utilizados y acumulados expiran</li>
-            <li>Los proyectos privados pueden volverse inaccesibles</li>
-            <li>Pierdes acceso a funcionalidades premium</li>
-            <li>Vuelves automáticamente al plan gratuito</li>
-          </ul>
-          <p className="mt-2 text-sm bg-red-50 dark:bg-red-900/30 border border-red-200 dark:border-red-700 rounded p-2 text-black dark:text-red-200">
-            <strong>Nota:</strong> Los créditos no son reembolsables y no se transfieren al plan gratuito.
-          </p>
+          <p>NERD.LAT integra Supabase fácilmente. Solo indícale a NERD que quieres usar base de datos, pulsa en el icono de Supabase, crea tu cuenta y proyecto, genera un token y cópialo en NERD.LAT. Automáticamente se configurará el SQL con las tablas necesarias.</p>
+        </div>
+      )
+    },
+    {
+      question: "¿Qué base de datos son compatibles con NERD.LAT?",
+      answer: (
+        <div>
+          <p>Actualmente la integrada es Supabase. Para otras, como Firebase o SQL, se deben integrar mediante su API o dependencias.</p>
+        </div>
+      )
+    },
+    {
+      question: "¿Cómo gestiono mis tablas y registros desde NERD.LAT?",
+      answer: (
+        <div>
+          <p>La gestión se realiza directamente desde Supabase, donde puedes ver tablas, registros y almacenamiento.</p>
+        </div>
+      )
+    },
+    {
+      question: "¿Puedo exportar mi base de datos?",
+      answer: (
+        <div>
+          <p>Sí, puedes hacerlo desde Supabase exportando tus tablas y proyectos.</p>
+        </div>
+      )
+    },
+    {
+      question: "¿Cómo conectar una API a NERD.LAT?",
+      answer: (
+        <div>
+          <p>Dirígete a la API que desees usar, obtén su clave y pídele a NERD que la integre. Por ejemplo, con Google Gemini, basta con obtener la clave de API y pedir a NERD que la conecte.</p>
+        </div>
+      )
+    },
+    {
+      question: "¿Puedo usar APIs externas como Google Maps, Stripe o Firebase?",
+      answer: (
+        <div>
+          <p>Sí, y próximamente habrá una store de APIs dentro de NERD.LAT para facilitar integraciones.</p>
+        </div>
+      )
+    },
+    {
+      question: "¿Cómo creo mi propia API con NERD.LAT?",
+      answer: (
+        <div>
+          <p>Es posible, aunque puede ser más complejo. Con instrucciones claras y detalladas, NERD.LAT puede ayudarte a generarla.</p>
+        </div>
+      )
+    },
+    {
+      question: "¿Cómo probar si mi API está funcionando correctamente?",
+      answer: (
+        <div>
+          <p>Asegúrate de que las dependencias estén instaladas, que la clave de API esté bien configurada y revisa el código antes de integrarlo a tu proyecto.</p>
+        </div>
+      )
+    },
+    {
+      question: "¿Cómo ganar más tokens en NERD.LAT?",
+      answer: (
+        <div>
+          <p>NERD.LAT tiene un sistema de referidos. Invita amigos por correo electrónico y recibirás 500.000 tokens gratis por cada referido.</p>
+        </div>
+      )
+    },
+    {
+      question: "¿Cómo compro tokens en NERD.LAT?",
+      answer: (
+        <div>
+          <p>Actualmente hay tres planes: 14, 29 y 199 dólares. El más popular es el de 29, pero el de 199 ofrece acceso a todos los modelos de IA.</p>
+        </div>
+      )
+    },
+    {
+      question: "¿Qué pasa si me quedo sin tokens?",
+      answer: (
+        <div>
+          <p>Si se acaban tus tokens diarios gratuitos, puedes esperar al siguiente día para recibir más. También puedes recargar adquiriendo un plan premium.</p>
+        </div>
+      )
+    },
+    {
+      question: "¿Cómo realizar pagos desde NERD.LAT?",
+      answer: (
+        <div>
+          <p>Aún no es posible realizar pagos directamente, pero próximamente se integrará esa función.</p>
+        </div>
+      )
+    },
+    {
+      question: "¿Cómo implemento pagos en mi app/web con NERD.LAT?",
+      answer: (
+        <div>
+          <p>Puedes integrar plataformas como PayPal, Stripe u otras APIs de pago directamente en tu proyecto.</p>
+        </div>
+      )
+    },
+    {
+      question: "¿Cómo genero ingresos con NERD.LAT?",
+      answer: (
+        <div>
+          <p>Puedes crear webs, apps o sistemas con NERD.LAT y ofrecerlos como servicio a negocios. Por ejemplo, restaurantes, autolavados o talleres. Generas el proyecto, lo publicas y lo entregas a tu cliente.</p>
+        </div>
+      )
+    },
+    {
+      question: "¿Puedo monetizar mis apps/webs creadas en NERD.LAT?",
+      answer: (
+        <div>
+          <p>Sí, se pueden monetizar sin problema. Próximamente también habrá monetización directa en la plataforma.</p>
+        </div>
+      )
+    },
+    {
+      question: "¿NERD.LAT cobra comisión por los pagos recibidos en mis apps?",
+      answer: (
+        <div>
+          <p>Actualmente no, porque los pagos aún no están integrados. Cuando se active, se informará si habrá comisión.</p>
+        </div>
+      )
+    },
+    {
+      question: "¿Cómo publico mi proyecto con NERD.LAT?",
+      answer: (
+        <div>
+          <p>Ve a tu proyecto y pulsa en 'Publicar'. También puedes añadir un dominio personalizado si lo deseas.</p>
+        </div>
+      )
+    },
+    {
+      question: "¿Dónde se alojan los proyectos creados?",
+      answer: (
+        <div>
+          <p>Los proyectos se alojan en la infraestructura de NERD.LAT, con seguridad garantizada.</p>
+        </div>
+      )
+    },
+    {
+      question: "¿Puedo usar mi propio dominio en NERD.LAT?",
+      answer: (
+        <div>
+          <p>Sí, puedes añadir tu dominio y NERD.LAT te dará las configuraciones de DNS necesarias.</p>
+        </div>
+      )
+    },
+    {
+      question: "¿Cómo genero un APK para Android?",
+      answer: (
+        <div>
+          <p>Aún no está disponible, pero próximamente se podrá generar.</p>
+        </div>
+      )
+    },
+    {
+      question: "¿Se puede publicar en iOS con NERD.LAT?",
+      answer: (
+        <div>
+          <p>Sí, aunque por ahora se generan apps web. Pronto podrás generar también archivos IPA para iOS.</p>
+        </div>
+      )
+    },
+    {
+      question: "¿Cómo actualizo un proyecto publicado?",
+      answer: (
+        <div>
+          <p>Realiza el cambio en NERD.LAT y vuelve a publicar tu proyecto. La actualización será inmediata.</p>
+        </div>
+      )
+    },
+    {
+      question: "No puedo entrar a mi cuenta, ¿qué hago?",
+      answer: (
+        <div>
+          <p>Revisa si no tienes un VPN o DNS que bloquee la página. Intenta ingresar de nuevo con Google.</p>
+        </div>
+      )
+    },
+    {
+      question: "Mi proyecto no carga, ¿cómo lo soluciono?",
+      answer: (
+        <div>
+          <p>Revisa la consola de desarrolladores de tu navegador. Si no identificas el problema, restaura una versión anterior del proyecto.</p>
+        </div>
+      )
+    },
+    {
+      question: "¿Qué hago si mis tokens desaparecen o no se acreditan?",
+      answer: (
+        <div>
+          <p>Contacta al soporte de NERD.LAT para que puedan revisar tu caso y acreditarte los tokens.</p>
+        </div>
+      )
+    },
+    {
+      question: "¿Puedo recuperar un proyecto borrado?",
+      answer: (
+        <div>
+          <p>No, actualmente los proyectos eliminados no se pueden recuperar. Se muestra una advertencia antes de borrarlos.</p>
+        </div>
+      )
+    },
+    {
+      question: "¿Qué hago si la plataforma se queda trabada?",
+      answer: (
+        <div>
+          <p>Si se queda bloqueada durante la codificación, intenta refrescar, esperar unos minutos o volver a ejecutar el prompt.</p>
+        </div>
+      )
+    },
+    {
+      question: "¿Cómo contacto con soporte en NERD.LAT?",
+      answer: (
+        <div>
+          <p>Es súper fácil, tienes un botón de 'Reportar errores', ahí puedes contactar a soporte directamente desde WhatsApp o mandar tu error automáticamente. También puedes hacerlo desde la sección de Planes, yendo hacia abajo y pulsando en 'Contactar con soporte'.</p>
+        </div>
+      )
+    },
+    {
+      question: "¿Qué nuevas funciones están por llegar en NERD.LAT?",
+      answer: (
+        <div>
+          <p>Estamos preparando muchas sorpresas para ustedes. Próximamente habrá nuevos modelos de inteligencia artificial, integración de métodos de pago, mayor estabilidad en la plataforma y muchas funciones más que se lanzarán progresivamente.</p>
+        </div>
+      )
+    },
+    {
+      question: "¿Se podrán generar apps nativas pronto?",
+      answer: (
+        <div>
+          <p>Sí, muy pronto será posible generar apps nativas completas sin ningún problema.</p>
+        </div>
+      )
+    },
+    {
+      question: "¿Habrá integraciones con más servicios externos?",
+      answer: (
+        <div>
+          <p>Sí, se integrarán muchos más servicios externos para ampliar las capacidades de la plataforma.</p>
         </div>
       )
     },
