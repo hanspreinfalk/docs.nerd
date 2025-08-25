@@ -47,8 +47,7 @@ export function GettingStartedPage() {
     { id: 'vision-general', title: 'Una visión general de lo que es Nerd' },
     { id: 'vistazo-nerd', title: 'Hechemos un vistazo a Nerd' },
     { id: 'empieza-proyecto', title: 'Empieza tu Proyecto' },
-    { id: 'edita-proyecto', title: 'Edita tu Proyecto' },
-    { id: 'publica-proyecto', title: 'Publica tu Proyecto' }
+
   ]
 
   const toggleItem = (index) => {

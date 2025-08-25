@@ -77,17 +77,9 @@ function ConsejosTrucosTableOfContents({ sections }) {
 
 export function ConsejosTrucosPage() {
   const sections = [
-    { id: 'introduccion', title: 'Mejores Prácticas' },
-    { id: 'fundacion', title: '1. Establece tu Fundación' },
-    { id: 'prompting', title: '2. Mejores Prácticas de Prompting' },
-    { id: 'interaccion-ia', title: '3. Interactúa Efectivamente con la IA' },
-    { id: 'supabase', title: '4. Evita Problemas con Supabase' },
-    { id: 'visual-edit', title: '5. Usa la Edición Visual' },
-    { id: 'github', title: '6. Usa GitHub y Control de Versiones' },
-    { id: 'remix', title: '7. Cuando Todo Falle, Remix' },
-    { id: 'paciencia', title: '8. Mantén la Paciencia' },
-    { id: 'documentacion', title: '9. Usa la Documentación' },
-    { id: 'bonus', title: '10. Consejos Adicionales' }
+    { id: 'introduccion', title: 'Consejos y Trucos de Nerd.lat' },
+    { id: 'consejos-generales', title: 'Consejos Generales' },
+    { id: 'trucos-practicos', title: 'Trucos Prácticos' }
   ]
 
   return (
@@ -96,252 +88,239 @@ export function ConsejosTrucosPage() {
       <div className="flex flex-col items-start justify-start min-h-[40vh] px-4 lg:px-6">
         <div id="introduccion" className="text-center space-y-3 px-4 lg:px-6">
           <h1 className="text-xl font-bold tracking-tight lg:text-3xl text-left text-black dark:text-white">
-            Mejores Prácticas
+            Consejos y Trucos de Nerd.lat
           </h1>
           <p className="text-base text-black dark:text-white lg:text-lg text-left max-w-3xl">
-            Aprovecha al Máximo Nerd.lat
+            Domina Nerd.lat con estrategias probadas, evita errores costosos y acelera tu desarrollo con técnicas de expertos.
           </p>
         </div>
 
-        <div id="fundacion" className="w-full max-w-3xl mt-6 px-4 lg:px-6">
-          <h2 className="text-lg font-semibold text-black dark:text-white mb-4">
-            1. Establece tu Fundación: Usa el Archivo de Conocimiento
-          </h2>
-          <p className="text-base text-black dark:text-white lg:text-lg mb-4">
-            <strong>Por qué importa:</strong> El archivo de Conocimiento es el cerebro de tu proyecto. Se envía con cada prompt y ayuda a la IA a entender el contexto completo.
-          </p>
-          <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700 mb-4">
-            <h3 className="font-semibold text-black dark:text-white mb-3">Qué incluir:</h3>
-            <ul className="list-disc list-inside text-sm text-black dark:text-gray-300 space-y-2">
-              <li>Tu visión del producto (piénsalo como un PRD)</li>
-              <li>Jornadas de usuario y personas</li>
-              <li>Características y funcionalidades clave</li>
-              <li>Sistemas de diseño y guías de UI</li>
-              <li>Comportamiento específico por rol (ej. Admin, Usuario, Inversor)</li>
-            </ul>
-          </div>
-          <p className="text-sm text-black dark:text-gray-300 mb-3">
-            Puedes generar automáticamente un archivo de Conocimiento con un prompt directo:
-          </p>
-          <div className="bg-gray-50 dark:bg-gray-800 rounded p-3 text-sm font-mono text-black dark:text-gray-300">
-            <p>Genera documentación de conocimiento para mi proyecto basado en las características que ya he implementado.</p>
-          </div>
-        </div>
-
-        <div id="prompting" className="w-full max-w-3xl mt-6 px-4 lg:px-6">
-          <h2 className="text-lg font-semibold text-black dark:text-white mb-4">
-            2. Mejores Prácticas de Prompting
-          </h2>
-          <p className="text-base text-black dark:text-white lg:text-lg mb-4">
-            Prompts claros y verbosos = mejor salida. Piensa en la IA como tu compañero de ingeniería, solo sabe lo que le dices.
-          </p>
-          
-          <div className="space-y-4">
-
-
-            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
-              <h3 className="font-semibold text-black dark:text-white mb-3">Plantilla de Desglose de Características:</h3>
-              <div className="bg-gray-50 dark:bg-gray-800 rounded p-3 text-sm font-mono text-black dark:text-gray-300">
-                <p>1. Crear la nueva página</p>
-                <p>2. Agregar layout de UI</p>
-                <p>3. Conectar los datos</p>
-                <p>4. Agregar lógica + casos extremos</p>
-                <p>5. Probar por rol</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div id="interaccion-ia" className="w-full max-w-3xl mt-6 px-4 lg:px-6">
-          <h2 className="text-lg font-semibold text-black dark:text-white mb-4">
-            3. Interactúa Efectivamente con la IA
-          </h2>
-          <p className="text-base text-black dark:text-white lg:text-lg mb-4">
-            La IA es tu asistente de desarrollo que responde directamente a tus instrucciones. Te ayuda a depurar, implementar características y optimizar código basándose en los prompts que le proporciones.
-          </p>
-          
-          <div className="space-y-4">
-            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
-              <h3 className="font-semibold text-black dark:text-white mb-3">Cuándo solicitar ayuda de planificación:</h3>
-              <ul className="space-y-2 text-sm text-black dark:text-gray-300">
-                <li>• Después de 2-3 intentos fallidos de implementación</li>
-                <li>• Al depurar lógica compleja o problemas de base de datos</li>
-                <li>• Al planificar nuevas características antes de implementarlas</li>
-              </ul>
-            </div>
-
-            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
-              <h3 className="font-semibold text-black dark:text-white mb-3">Consejo de Flujo de Trabajo:</h3>
-              <p className="text-sm text-black dark:text-gray-300 mb-3">
-                Algunos usuarios prefieren planificar primero con prompts exploratorios antes de dar instrucciones de implementación definitivas.
-              </p>
-              <div className="bg-gray-50 dark:bg-gray-800 rounded p-3 text-sm font-mono text-black dark:text-gray-300">
-                <p>En la página /settings, implementa [característica]. El comportamiento esperado es [XYZ]. Por favor no toques el componente A, layout B, o lógica compartida a menos que sea necesario.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div id="supabase" className="w-full max-w-3xl mt-6 px-4 lg:px-6">
-          <h2 className="text-lg font-semibold text-black dark:text-white mb-4">
-            4. Evita Errores Comunes con Supabase
-          </h2>
-          <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-4 mb-4">
-            <p className="text-sm text-yellow-800 dark:text-yellow-200">
-              <strong>Atención:</strong> Supabase no revierte limpiamente. Si reviertes una versión, tu esquema de base de datos puede romperse.
-            </p>
-          </div>
-          
-          <div className="space-y-4">
-            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
-              <h3 className="font-semibold text-black dark:text-white mb-3">Mejores Prácticas:</h3>
-              <ul className="space-y-2 text-sm text-black dark:text-gray-300">
-                <li>• Conecta Supabase después de que el front-end esté estable</li>
-                <li>• Si debes revertir, pídele a la IA:</li>
-              </ul>
-              <div className="bg-gray-50 dark:bg-gray-800 rounded p-3 mt-3 text-sm font-mono text-black dark:text-gray-300">
-                <p>Por favor valida el esquema SQL actual y asegúrate de que no hayan ocurrido cambios que rompan la funcionalidad.</p>
-              </div>
-              <p className="text-sm text-black dark:text-gray-300 mt-3">
-                Siempre prueba características vinculadas a la base de datos antes de publicar.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div id="visual-edit" className="w-full max-w-3xl mt-6 px-4 lg:px-6">
-          <h2 className="text-lg font-semibold text-black dark:text-white mb-4">
-            5. Usa la Edición Visual para Arreglos Rápidos de UI
-          </h2>
-          <p className="text-base text-black dark:text-white lg:text-lg mb-4">
-            La herramienta de Edición Visual es gratuita y rápida. Úsala en lugar de prompts para:
-          </p>
-          <ul className="list-disc list-inside text-base text-black dark:text-white lg:text-lg space-y-2">
-            <li>Cambiar texto, colores, fuentes, ajustes de layout</li>
-            <li>Editar múltiples elementos pequeños a la vez</li>
-            <li>Commits seguros y sin créditos (con deshacer disponible)</li>
-          </ul>
-        </div>
-
-        <div id="github" className="w-full max-w-3xl mt-6 px-4 lg:px-6">
-          <h2 className="text-lg font-semibold text-black dark:text-white mb-4">
-            6. Usa GitHub y Control de Versiones Sabiamente
-          </h2>
-          <p className="text-base text-black dark:text-white lg:text-lg mb-4">
-            Cada edición es un commit. Usa el pinning para marcar versiones estables.
-          </p>
-          
-          <div className="space-y-4">
-            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
-              <ul className="space-y-2 text-sm text-black dark:text-gray-300">
-                <li>• Después de cada característica funcional: Pínala</li>
-                <li>• Después de cada bug: Compara versiones visualmente</li>
-              </ul>
-              <div className="bg-gray-50 dark:bg-gray-800 rounded p-3 mt-3 text-sm font-mono text-black dark:text-gray-300">
-                <p>Compara la versión anterior con la actual. ¿Qué cambió? ¿Qué podría estar rompiendo?</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div id="remix" className="w-full max-w-3xl mt-6 px-4 lg:px-6">
-          <h2 className="text-lg font-semibold text-black dark:text-white mb-4">
-            7. Cuando Todo Falle, Remix
-          </h2>
-          <p className="text-base text-black dark:text-white lg:text-lg mb-4">
-            Muchos usuarios se dan cuenta: hacerlo todo de nuevo toma menos tiempo la segunda vez.
-          </p>
-          
-          <div className="space-y-4">
-            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
-              <p className="text-sm text-black dark:text-gray-300 mb-3">
-                Remix crea una copia limpia de tu proyecto desde su estado inicial.
-              </p>
-              <ul className="space-y-2 text-sm text-black dark:text-gray-300">
-                <li>• Reconstruye con mejor prompting + conocimiento más claro</li>
-                <li>• Usa tu proyecto anterior solo como referencia</li>
-                <li>• Casos de uso: estás atascado en un bucle buggy, quieres reiniciar limpio con historia preservada</li>
-              </ul>
-              <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded p-3 mt-3">
-                <p className="text-sm text-yellow-800 dark:text-yellow-200">
-                  <strong>Nota:</strong> Remix requiere desconectar Supabase primero.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div id="paciencia" className="w-full max-w-3xl mt-6 px-4 lg:px-6">
-          <h2 className="text-lg font-semibold text-black dark:text-white mb-4">
-            8. Mantén la Paciencia, Mantén la Calma
-          </h2>
-          <p className="text-base text-black dark:text-white lg:text-lg mb-4">
-            No estás solo. La IA puede ser mágica un momento y frustrante al siguiente. El 5% final de cualquier construcción suele ser el más lento, pero el más importante.
-          </p>
-          
-          <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
-            <h3 className="font-semibold text-black dark:text-white mb-3">Regla de oro:</h3>
-            <p className="text-sm text-black dark:text-gray-300">
-              Tómate tu tiempo con los prompts. Revisa todo. Divide el trabajo en bloques pequeños y probables. Cuanto más precisos sean tus inputs, mejores serán tus outputs.
+        <div className="max-w-2xl mt-6 px-4 lg:px-4 md:px-2">
+          <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-6">
+            <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">¡Atención!</h3>
+            <p className="text-sm text-blue-800 dark:text-blue-200">
+              Los consejos de esta guía han sido validados por miles de desarrolladores en nuestra comunidad. Implementarlos te ahorrará horas de debugging, evitará pérdidas de progreso y multiplicará tu productividad. Cada estrategia está diseñada para casos reales que enfrentan nuestros usuarios diariamente.
             </p>
           </div>
         </div>
 
-        <div id="documentacion" className="w-full max-w-3xl mt-6 px-4 lg:px-6">
+        <div id="consejos-generales" className="w-full max-w-3xl mt-6 px-4 lg:px-6">
           <h2 className="text-lg font-semibold text-black dark:text-white mb-4">
-            9. Usa la Documentación y Pide Ayuda
+            Consejos Generales
           </h2>
           <p className="text-base text-black dark:text-white lg:text-lg mb-4">
-            La documentación contiene tutoriales, plantillas, consejos de SEO, integraciones y más. Puedes hacer preguntas directamente en el asistente de IA de la documentación.
+            Fundamentos esenciales que todo usuario de Nerd.lat debe conocer. Estos principios previenen los errores más costosos y establecen las bases para un desarrollo exitoso:
           </p>
-          <ul className="list-disc list-inside text-base text-black dark:text-white lg:text-lg space-y-2">
-            <li>Únete a la comunidad Discord para apoyo entre pares</li>
-            <li>Cuando estés listo, envía tu proyecto a Nerd.lat Launch</li>
-          </ul>
+          
+          <div className="space-y-6">
+            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
+              <h3 className="font-semibold text-black dark:text-white mb-2">1. Diversifica tus prompts para mejores resultados</h3>
+              <p className="text-sm text-black dark:text-gray-300">
+                Reutilizar constantemente prompts extensos de ChatGPT puede generar código inconsistente y patrones conflictivos. Adapta cada prompt al contexto específico de tu proyecto para mantener coherencia arquitectónica.
+              </p>
+            </div>
+
+            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
+              <h3 className="font-semibold text-black dark:text-white mb-2">2. Usa Jarvis estratégicamente</h3>
+              <p className="text-sm text-black dark:text-gray-300">
+                Jarvis es ideal para arquitectura inicial y refactorización mayor, pero usarlo repetidamente puede sobrecomplicar tu código. Reserva su potencia para decisiones estructurales importantes, no para ajustes menores.
+              </p>
+            </div>
+
+            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
+              <h3 className="font-semibold text-black dark:text-white mb-2">3. Estrategia de modelos: Jarvis para arquitectura, Nerd para desarrollo</h3>
+              <p className="text-sm text-black dark:text-gray-300">
+                Jarvis excele en visión general, planificación de features complejas y decisiones arquitectónicas. Nerd es perfecto para implementación iterativa, debugging y refinamiento de funcionalidades existentes.
+              </p>
+            </div>
+
+            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
+              <h3 className="font-semibold text-black dark:text-white mb-2">4. Evita recargar durante sesiones activas</h3>
+              <p className="text-sm text-black dark:text-gray-300">
+                Recargar la página puede interrumpir el contexto de la IA y causar pérdida de tokens acumulados. Si necesitas refrescar, completa primero la tarea en curso o guarda un checkpoint explícito.
+              </p>
+            </div>
+
+            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
+              <h3 className="font-semibold text-black dark:text-white mb-2">5. Publica frecuentemente para detectar errores temprano</h3>
+              <p className="text-sm text-black dark:text-gray-300">
+                Cada publicación es una prueba en tiempo real. Detectar errores inmediatamente es 10x más rápido que debuggear después de múltiples cambios acumulados. Establece un ritmo: codifica → publica → verifica.
+              </p>
+            </div>
+
+            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
+              <h3 className="font-semibold text-black dark:text-white mb-2">6. Protege tus proyectos: la eliminación es permanente</h3>
+              <p className="text-sm text-black dark:text-gray-300">
+                No existe papelera de reciclaje para proyectos eliminados. Antes de borrar, consulta con soporte para explorar alternativas como archivado o transferencia. Hemos recuperado proyectos valiosos que usuarios pensaron que debían eliminar.
+              </p>
+            </div>
+
+            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
+              <h3 className="font-semibold text-black dark:text-white mb-2">7. Combina modelos según tu plan</h3>
+              <p className="text-sm text-black dark:text-gray-300 mb-3">
+                Maximiza el valor de tu plan eligiendo la estrategia óptima:
+              </p>
+              <div className="bg-gray-50 dark:bg-gray-800 rounded p-3 text-sm font-mono text-black dark:text-gray-300">
+                <p>• <strong>Plan básico:</strong> Prompts concisos y específicos. Una instrucción clara por vez.</p>
+                <p>• <strong>Plan alto:</strong> Flujo completo - Jarvis planifica → Nerd ejecuta → Flhas depura.</p>
+              </div>
+            </div>
+
+            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
+              <h3 className="font-semibold text-black dark:text-white mb-2">8. El soporte es tu aliado estratégico</h3>
+              <p className="text-sm text-black dark:text-gray-300">
+                Nuestro equipo maneja casos únicos diariamente. Pueden recuperar proyectos, resolver bugs complejos, sugerir arquitecturas mejores y personalizar flujos para tu caso específico. No dudes en consultarnos.
+              </p>
+            </div>
+
+            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
+              <h3 className="font-semibold text-black dark:text-white mb-2">9. Estabilidad de conexión = estabilidad del proyecto</h3>
+              <p className="text-sm text-black dark:text-gray-300">
+                Conexiones intermitentes causan timeouts, uploads parciales y sincronización incorrecta. En conexiones débiles, trabaja en sesiones más cortas y guarda progreso frecuentemente.
+              </p>
+            </div>
+
+            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
+              <h3 className="font-semibold text-black dark:text-white mb-2">10. Monetiza y comparte tu trabajo</h3>
+              <p className="text-sm text-black dark:text-gray-300">
+                Cada proyecto es una oportunidad de negocio o portfolio. Publícalos como demos, ofrécelos a clientes potenciales, o úsalos como casos de estudio. Tu próximo proyecto puede ser tu próxima fuente de ingresos.
+              </p>
+            </div>
+          </div>
         </div>
 
-        <div id="bonus" className="w-full max-w-3xl mt-6 px-4 lg:px-6">
+        <div id="trucos-practicos" className="w-full max-w-3xl mt-6 px-4 lg:px-6">
           <h2 className="text-lg font-semibold text-black dark:text-white mb-4">
-            10. Consejos Adicionales
+            🛠️ Trucos Prácticos
           </h2>
+          <p className="text-base text-black dark:text-white lg:text-lg mb-4">
+            Técnicas avanzadas descubiertas por power users. Estos trucos pueden 2x tu velocidad de desarrollo y resolver problemas que parecían imposibles:
+          </p>
           
-          <div className="space-y-4">
+          <div className="space-y-6">
             <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
-              <ul className="space-y-3 text-sm text-black dark:text-gray-300">
-                <li className="flex items-start">
-                  <span className="text-blue-600 dark:text-blue-400 mr-2 mt-1">•</span>
-                  <div>
-                    Agrega un prompt de nota de voz usando dictado (ej. En Mac, usa el micrófono para dictar prompts largos) para prompts largos. Crearás mejor input más rápido, especialmente útil cuando estés frustrado o cansado.
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-600 dark:text-blue-400 mr-2 mt-1">•</span>
-                  <div>
-                    Usa el patrón de prompt "Estoy frustrado..." para empujar mejor enfoque de la IA
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-600 dark:text-blue-400 mr-2 mt-1">•</span>
-                  <div>
-                    Después de una edición mayor, siempre re revisa múltiples roles y su comportamiento (especialmente con lógica condicional)
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-600 dark:text-blue-400 mr-2 mt-1">•</span>
-                  <div>
-                    Almacena versiones estables como respaldos para depuración rápida
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-600 dark:text-blue-400 mr-2 mt-1">•</span>
-                  <div>
-                    Si ves efectos secundarios inesperados, esto ayuda a evitar bugs causados por lógica demasiado genérica:
-                    <div className="bg-gray-50 dark:bg-gray-800 rounded p-2 mt-2 text-sm font-mono text-black dark:text-gray-300">
-                      Crea un componente específicamente para [rol X] y no reutilices componentes compartidos a menos que estén claramente delimitados.
-                    </div>
-                  </div>
-                </li>
-              </ul>
+              <h3 className="font-semibold text-black dark:text-white mb-2">1. Sistema de especialización de modelos</h3>
+              <p className="text-sm text-black dark:text-gray-300 mb-3">
+                Cada modelo tiene fortalezas específicas. Esta distribución optimiza resultados y reduce frustraciones:
+              </p>
+              <div className="bg-gray-50 dark:bg-gray-800 rounded p-3 text-sm font-mono text-black dark:text-gray-300">
+                <p>• <strong>Jarvis:</strong> Arquitectura, features complejas, refactorización mayor</p>
+                <p>• <strong>Nerd:</strong> Implementación, ajustes, features incrementales</p>
+                <p>• <strong>Flhas:</strong> Debugging, optimización, resolución de errores</p>
+              </div>
+            </div>
+
+            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
+              <h3 className="font-semibold text-black dark:text-white mb-2">2. Flujo Nerd → Jarvis para máxima calidad</h3>
+              <p className="text-sm text-black dark:text-gray-300">
+                Nerd establece una base sólida y consistente. Jarvis luego puede elevar esa base con arquitectura sofisticada y patrones avanzados, resultando en código más elegante y mantenible.
+              </p>
+            </div>
+
+            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
+              <h3 className="font-semibold text-black dark:text-white mb-2">3. Estrategia específica para Game Development</h3>
+              <p className="text-sm text-black dark:text-gray-300">
+                Los juegos requieren arquitectura compleja desde el inicio. Jarvis diseña el motor y sistemas centrales, mientras Flhas optimiza performance y elimina bugs críticos que pueden arruinar la experiencia del jugador.
+              </p>
+            </div>
+
+            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
+              <h3 className="font-semibold text-black dark:text-white mb-2">4. Máxima eficiencia en planes básicos</h3>
+              <p className="text-sm text-black dark:text-gray-300">
+                Con límites de uso, cada prompt cuenta. Formula instrucciones precisas con un objetivo claro. Evita requests ambiguos que requieran múltiples iteraciones para clarificar.
+              </p>
+            </div>
+
+            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
+              <h3 className="font-semibold text-black dark:text-white mb-2">5. Fix rápido para pantalla negra</h3>
+              <p className="text-sm text-black dark:text-gray-300">
+                Este es un truco de la comunidad que funciona sorprendentemente bien. F5 múltiples veces (7 es el número mágico) fuerza un refresh completo del cache y resuelve la mayoría de errores de renderizado.
+              </p>
+            </div>
+
+            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
+              <h3 className="font-semibold text-black dark:text-white mb-2">6. Manejo de errores de publicación</h3>
+              <p className="text-sm text-black dark:text-gray-300 mb-3">
+                Si encuentras problemas al publicar:
+              </p>
+              <div className="bg-gray-50 dark:bg-gray-800 rounded p-3 text-sm font-mono text-black dark:text-gray-300">
+                <p>• Intenta publicar varias veces</p>
+                <p>• Regresa a una versión anterior si no funciona</p>
+              </div>
+            </div>
+
+            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
+              <h3 className="font-semibold text-black dark:text-white mb-2">7. Construye tu biblioteca personal de snippets</h3>
+              <p className="text-sm text-black dark:text-gray-300">
+                Mantén un repositorio de componentes, funciones y configuraciones que funcionan bien. Reutilizar código probado acelera desarrollo y reduce bugs inesperados.
+              </p>
+            </div>
+
+            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
+              <h3 className="font-semibold text-black dark:text-white mb-2">8. Desarrolla boilerplates personalizados</h3>
+              <p className="text-sm text-black dark:text-gray-300">
+                Crea proyectos plantilla con tu stack tecnológico preferido, configuraciones optimizadas y estructura probada. Un buen boilerplate puede ahorrarte 2-3 horas en cada nuevo proyecto.
+              </p>
+            </div>
+
+            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
+              <h3 className="font-semibold text-black dark:text-white mb-2">9. Monetiza tu trabajo</h3>
+              <p className="text-sm text-black dark:text-gray-300 mb-3">
+                Cada proyecto es una semilla de oportunidad. Estrategias de monetización comprobadas:
+              </p>
+              <div className="bg-gray-50 dark:bg-gray-800 rounded p-3 text-sm font-mono text-black dark:text-gray-300">
+                <p>• <strong>Venta directa:</strong> Landing pages, e-commerce, dashboards personalizados</p>
+                <p>• <strong>Portfolio activo:</strong> Demos funcionales atraen más clientes que screenshots</p>
+                <p>• <strong>Licenciamiento:</strong> Tools y utilidades pueden generar ingresos recurrentes</p>
+              </div>
+            </div>
+
+            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
+              <h3 className="font-semibold text-black dark:text-white mb-2">10. Sácale provecho total a Nerd.lat</h3>
+              <p className="text-sm text-black dark:text-gray-300 mb-3">
+                Nerd.lat trasciende la programación. Casos de uso menos conocidos pero poderosos:
+              </p>
+              <div className="bg-gray-50 dark:bg-gray-800 rounded p-3 text-sm font-mono text-black dark:text-gray-300">
+                <p>• <strong>Content generation:</strong> Blogs, newsletters, documentación técnica</p>
+                <p>• <strong>Business tools:</strong> Calculadoras, generadores de presupuestos</p>
+                <p>• <strong>Automation:</strong> Dashboards de reportes, integraciones API</p>
+                <p>• <strong>Flhas como comodín:</strong> Cuando otros modelos no funcionan, Flhas often puede encontrar la solución</p>
+              </div>
+            </div>
+
+            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
+              <h3 className="font-semibold text-black dark:text-white mb-2">11. Estrategia de backup proactiva</h3>
+              <p className="text-sm text-black dark:text-gray-300">
+                No dependas solo del versionado automático. Exporta proyectos antes de cambios mayores, experimentos arriesgados, o integraciones complejas. Un backup manual puede salvarte días de trabajo.
+              </p>
+            </div>
+
+            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
+              <h3 className="font-semibold text-black dark:text-white mb-2">12. Sistema de nomenclatura inteligente</h3>
+              <p className="text-sm text-black dark:text-gray-300">
+                Usa convenciones consistentes: [Cliente]-[Proyecto]-[Versión] o [Fecha]-[Feature]. Nombres claros te ahorran tiempo mental y evitan confusiones cuando manejas múltiples proyectos simultáneamente.
+              </p>
+            </div>
+
+            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
+              <h3 className="font-semibold text-black dark:text-white mb-2">13. Testing multi-navegador como debugging</h3>
+              <p className="text-sm text-black dark:text-gray-300">
+                Los problemas de renderizado a menudo son específicos del navegador. Chrome, Firefox, Safari y Edge pueden comportarse diferente. Probar en múltiples navegadores puede revelar si es un bug real o incompatibilidad.
+              </p>
+            </div>
+
+            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
+              <h3 className="font-semibold text-black dark:text-white mb-2">14. Filosofía de testing iterativo</h3>
+              <p className="text-sm text-black dark:text-gray-300">
+                El "testing al final" es un anti-patrón costoso. Implementa un micro-ciclo: codifica 10-15 minutos → prueba inmediatamente → ajusta. Detectar problemas temprano es exponencialmente más rápido que debugging complejo.
+              </p>
+            </div>
+
+            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
+              <h3 className="font-semibold text-black dark:text-white mb-2">15. Desbloquea features avanzadas</h3>
+              <p className="text-sm text-black dark:text-gray-300">
+                Nerd.lat constantemente agrega capacidades. Explora el menu de herramientas, prueba integraciones experimentales, y mantente atento a updates. Los power users suelen descubrir funcionalidades antes de que sean ampliamente conocidas.
+              </p>
             </div>
           </div>
         </div>
