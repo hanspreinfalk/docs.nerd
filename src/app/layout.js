@@ -30,7 +30,7 @@ export const metadata = {
     description: "Descubre cómo usar Nerd.lat de manera efectiva. Guías, consejos, trucos y todo lo que necesitas para aprovechar al máximo esta herramienta de IA.",
     images: [
       {
-        url: "https://docs.nerd.lat/marketing/socialmedia.png",
+        url: "https://docs.nerd.lat/socialmedia.png",
         width: 1200,
         height: 630,
         alt: "Nerd.lat Learn - Aprende a usar Nerd.lat",
@@ -44,7 +44,7 @@ export const metadata = {
     creator: "@nerdlat",
     title: "Nerd.lat Learn - Aprende a usar Nerd.lat",
     description: "Descubre cómo usar Nerd.lat de manera efectiva. Guías, consejos, trucos y todo lo que necesitas para aprovechar al máximo esta herramienta de IA.",
-    images: ["https://docs.nerd.lat/marketing/socialmedia.png"],
+    images: ["https://docs.nerd.lat/socialmedia.png"],
   },
   other: {
     "theme-color": "#000000",
@@ -61,9 +61,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-        <link rel="apple-touch-icon" href="/favicon.ico" />
+        <link rel="icon" href="/lentes.svg" sizes="any" />
+        <link rel="icon" href="/lentes.svg" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="/lentes.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="theme-color" content="#000000" />
@@ -87,7 +87,7 @@ export default function RootLayout({ children }) {
         <meta property="og:site_name" content="Nerd.lat Learn" />
         <meta property="og:title" content="Nerd.lat Learn - Aprende a usar Nerd.lat" />
         <meta property="og:description" content="Descubre cómo usar Nerd.lat de manera efectiva. Guías, consejos, trucos y todo lo que necesitas para aprovechar al máximo esta herramienta de IA." />
-        <meta property="og:image" content="https://docs.nerd.lat/marketing/socialmedia.png" />
+        <meta property="og:image" content="https://docs.nerd.lat/socialmedia.png" />
         
         {/* Twitter Card meta tags */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -95,7 +95,7 @@ export default function RootLayout({ children }) {
         <meta name="twitter:creator" content="@nerdlat" />
         <meta name="twitter:title" content="Nerd.lat Learn - Aprende a usar Nerd.lat" />
         <meta name="twitter:description" content="Descubre cómo usar Nerd.lat de manera efectiva. Guías, consejos, trucos y todo lo que necesitas para aprovechar al máximo esta herramienta de IA." />
-        <meta name="twitter:image" content="https://docs.nerd.lat/marketing/socialmedia.png" />
+        <meta name="twitter:image" content="https://docs.nerd.lat/socialmedia.png" />
         <meta name="twitter:image:alt" content="Nerd.lat Learn - Aprende a usar Nerd.lat" />
       </head>
       <body
