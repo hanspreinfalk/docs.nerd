@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react"
 import { useRouter } from "next/navigation"
 import Image from "next/image"
-import { Trash2, X, User, Sparkles, Send, Loader2 } from "lucide-react"
+import { Trash2, X, User, Sparkles, Send, Loader2, MessageCircle } from "lucide-react"
 
 export function AiChat({ isOpen, onClose }) {
   const [messages, setMessages] = useState([])
@@ -108,6 +108,27 @@ export function AiChat({ isOpen, onClose }) {
     }])
   }
 
+  const renderMessageContent = (content) => {
+    const whatsappPattern = /(https:\/\/wa\.me\/\d+)/g
+    const parts = content.split(whatsappPattern)
+    
+    return parts.map((part, index) => {
+      if (part.match(whatsappPattern)) {
+        return (
+          <button
+            key={index}
+            onClick={() => window.open(part, '_blank')}
+            className="inline-flex items-center gap-2 px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg font-medium transition-colors mx-1 my-1"
+          >
+            <MessageCircle className="w-4 h-4" />
+            Contactar por WhatsApp
+          </button>
+        )
+      }
+      return <span key={index}>{part}</span>
+    })
+  }
+
   if (!isOpen) return null
 
   return (
@@ -178,7 +199,7 @@ export function AiChat({ isOpen, onClose }) {
                     : 'bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700'
                 }`}>
                   <div className="whitespace-pre-wrap break-words">
-                    {message.content}
+                    {message.role === 'assistant' ? renderMessageContent(message.content) : message.content}
                   </div>
                 </div>
               </div>
