@@ -31,8 +31,8 @@ export const metadata = {
     images: [
       {
         url: "https://docs.nerd.lat/socialmedia.png",
-        width: 1200,
-        height: 630,
+        width: 2880,
+        height: 1620,
         alt: "Nerd.lat Learn - Aprende a usar Nerd.lat",
         type: "image/png",
       },
@@ -75,8 +75,8 @@ export default function RootLayout({ children }) {
         <meta name="mobile-web-app-capable" content="yes" />
         
         {/* WhatsApp specific meta tags */}
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
+        <meta property="og:image:width" content="2880" />
+        <meta property="og:image:height" content="1620" />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:alt" content="Nerd.lat Learn - Aprende a usar Nerd.lat" />
         
