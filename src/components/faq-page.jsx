@@ -50,7 +50,13 @@ export function FAQPage() {
       question: "¿Cómo inicio con NERD.LAT?",
       answer: (
         <div>
-          <p>Es súper fácil, solamente tienes que darle en el botón 'Empezar' al entrar a la web, regístrate con tu cuenta de Google y automáticamente ya estarías dentro de la inteligencia artificial. Se te acreditarían tokens gratis diariamente.</p>
+          <p>Iniciar con NERD.LAT es muy sencillo:</p>
+          <ol className="list-decimal list-inside space-y-1 mt-2">
+            <li>Visita la página web y haz clic en 'Empezar'</li>
+            <li>Regístrate usando tu cuenta de Google</li>
+            <li>Una vez dentro, automáticamente tendrás acceso a la IA</li>
+            <li>Recibirás tokens gratuitos diariamente para comenzar</li>
+          </ol>
         </div>
       )
     },
@@ -58,7 +64,13 @@ export function FAQPage() {
       question: "¿Cómo genero código con la plataforma?",
       answer: (
         <div>
-          <p>Es súper fácil generar código con la plataforma, solamente tienes que indicarle tu idea o prompt de tu aplicación y automáticamente la IA convierte ese prompt de palabras a código.</p>
+          <p>Generar código con NERD.LAT es muy simple:</p>
+          <ul className="list-disc list-inside space-y-1 mt-2">
+            <li><strong>Describe tu idea:</strong> Escribe un prompt detallando lo que quieres crear</li>
+            <li><strong>La IA procesa:</strong> Automáticamente convierte tu descripción en código funcional</li>
+            <li><strong>Resultado inmediato:</strong> Obtienes una aplicación completa lista para usar</li>
+          </ul>
+          <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">Tip: Mientras más específico seas en tu prompt, mejores resultados obtendrás.</p>
         </div>
       )
     },
@@ -74,7 +86,14 @@ export function FAQPage() {
       question: "¿Cómo descargo mi proyecto?",
       answer: (
         <div>
-          <p>Dirígete a tu proyecto, pulsa en el icono de configuración (rueda) y se desplegarán varias opciones. Entre ellas está el botón 'Descargar', que te permitirá bajar todas las dependencias y archivos de tu proyecto.</p>
+          <p>Para descargar tu proyecto sigue estos pasos:</p>
+          <ol className="list-decimal list-inside space-y-1 mt-2">
+            <li>Accede a tu proyecto en NERD.LAT</li>
+            <li>Haz clic en el <strong>ícono de configuración</strong> (rueda dentada)</li>
+            <li>Selecciona la opción <strong>'Descargar'</strong> del menú desplegable</li>
+            <li>Se descargará un archivo con todas las dependencias y archivos del proyecto</li>
+          </ol>
+          <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">El archivo descargado incluye todo lo necesario para ejecutar tu proyecto localmente.</p>
         </div>
       )
     },
@@ -122,7 +141,16 @@ export function FAQPage() {
       question: "¿Cómo integro la base de datos en mi proyecto?",
       answer: (
         <div>
-          <p>NERD.LAT integra Supabase fácilmente. Solo indícale a NERD que quieres usar base de datos, pulsa en el icono de Supabase, crea tu cuenta y proyecto, genera un token y cópialo en NERD.LAT. Automáticamente se configurará el SQL con las tablas necesarias.</p>
+          <p>NERD.LAT se integra perfectamente con <strong>Supabase</strong>:</p>
+          <ol className="list-decimal list-inside space-y-1 mt-2">
+            <li>Indica a NERD que quieres usar base de datos</li>
+            <li>Haz clic en el <strong>ícono de Supabase</strong></li>
+            <li>Crea tu cuenta y proyecto en Supabase</li>
+            <li>Genera un token de API en Supabase</li>
+            <li>Copia el token en NERD.LAT</li>
+            <li>La IA configurará automáticamente el SQL con las tablas necesarias</li>
+          </ol>
+          <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">La configuración es completamente automática una vez proporcionadas las credenciales.</p>
         </div>
       )
     },
@@ -186,7 +214,13 @@ export function FAQPage() {
       question: "¿Cómo ganar más tokens en NERD.LAT?",
       answer: (
         <div>
-          <p>NERD.LAT tiene un sistema de referidos. Invita amigos por correo electrónico y recibirás 500.000 tokens gratis por cada referido.</p>
+          <p>Puedes obtener tokens adicionales de varias formas:</p>
+          <ul className="list-disc list-inside space-y-1 mt-2">
+            <li><strong>Sistema de referidos:</strong> Invita amigos por correo electrónico y recibe 500.000 tokens gratis por cada referido exitoso</li>
+            <li><strong>Tokens diarios:</strong> Recibe entre 250.000 y 500.000 tokens gratuitos cada día</li>
+            <li><strong>Planes premium:</strong> Adquiere un plan de pago para obtener más tokens mensualmente</li>
+          </ul>
+          <p className="mt-2 text-sm text-green-600 dark:text-green-400">💡 Tip: El sistema de referidos es la forma más rápida de conseguir tokens extra.</p>
         </div>
       )
     },
@@ -194,7 +228,21 @@ export function FAQPage() {
       question: "¿Cómo compro tokens en NERD.LAT?",
       answer: (
         <div>
-          <p>Actualmente hay tres planes: 14, 29 y 199 dólares. El más popular es el de 29, pero el de 199 ofrece acceso a todos los modelos de IA.</p>
+          <p>NERD.LAT ofrece varios planes de suscripción:</p>
+          <div className="mt-3 space-y-3">
+            <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">
+              <p><strong>Plan Básico - $14/mes</strong></p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Ideal para proyectos pequeños y pruebas</p>
+            </div>
+            <div className="bg-blue-50 dark:bg-blue-900/30 p-3 rounded-lg border border-blue-200 dark:border-blue-700">
+              <p><strong>Plan Popular - $29/mes</strong> ⭐</p>
+              <p className="text-sm text-blue-600 dark:text-blue-400">El más elegido por los usuarios</p>
+            </div>
+            <div className="bg-purple-50 dark:bg-purple-900/30 p-3 rounded-lg border border-purple-200 dark:border-purple-700">
+              <p><strong>Plan Pro - $199/mes</strong></p>
+              <p className="text-sm text-purple-600 dark:text-purple-400">Acceso completo a todos los modelos de IA</p>
+            </div>
+          </div>
         </div>
       )
     },
@@ -250,7 +298,14 @@ export function FAQPage() {
       question: "¿Cómo publico mi proyecto con NERD.LAT?",
       answer: (
         <div>
-          <p>Ve a tu proyecto y pulsa en 'Publicar'. También puedes añadir un dominio personalizado si lo deseas.</p>
+          <p>Publicar tu proyecto es muy sencillo:</p>
+          <ol className="list-decimal list-inside space-y-1 mt-2">
+            <li>Accede a tu proyecto en NERD.LAT</li>
+            <li>Haz clic en el botón <strong>'Publicar'</strong></li>
+            <li>Tu proyecto estará disponible inmediatamente con una URL de NERD.LAT</li>
+            <li><em>Opcional:</em> Puedes añadir un dominio personalizado si lo prefieres</li>
+          </ol>
+          <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">La publicación es instantánea y tu aplicación estará disponible para todos los usuarios.</p>
         </div>
       )
     },
@@ -338,7 +393,22 @@ export function FAQPage() {
       question: "¿Cómo contacto con soporte en NERD.LAT?",
       answer: (
         <div>
-          <p>Es súper fácil, tienes un botón de 'Reportar errores', ahí puedes contactar a soporte directamente desde WhatsApp o mandar tu error automáticamente. También puedes hacerlo desde la sección de Planes, yendo hacia abajo y pulsando en 'Contactar con soporte'.</p>
+          <p>Hay varias formas de contactar con soporte:</p>
+          <ul className="list-disc list-inside space-y-2 mt-2">
+            <li><strong>Botón 'Reportar errores':</strong>
+              <ul className="list-disc list-inside ml-4 mt-1 space-y-1 text-sm">
+                <li>Contacto directo por WhatsApp</li>
+                <li>Envío automático de reportes de error</li>
+              </ul>
+            </li>
+            <li><strong>Sección de Planes:</strong>
+              <ul className="list-disc list-inside ml-4 mt-1 space-y-1 text-sm">
+                <li>Ve a la parte inferior de la página</li>
+                <li>Haz clic en 'Contactar con soporte'</li>
+              </ul>
+            </li>
+          </ul>
+          <p className="mt-2 text-sm text-blue-600 dark:text-blue-400">📱 El soporte por WhatsApp es la opción más rápida y directa.</p>
         </div>
       )
     },
@@ -346,7 +416,16 @@ export function FAQPage() {
       question: "¿Qué nuevas funciones están por llegar en NERD.LAT?",
       answer: (
         <div>
-          <p>Estamos preparando muchas sorpresas para ustedes. Próximamente habrá nuevos modelos de inteligencia artificial, integración de métodos de pago, mayor estabilidad en la plataforma y muchas funciones más que se lanzarán progresivamente.</p>
+          <p>Estamos trabajando en emocionantes mejoras:</p>
+          <ul className="list-disc list-inside space-y-1 mt-2">
+            <li><strong>🤖 Nuevos modelos de IA:</strong> Más opciones y capacidades avanzadas</li>
+            <li><strong>💳 Integración de pagos:</strong> Procesamiento de pagos directo en la plataforma</li>
+            <li><strong>📱 Apps nativas:</strong> Generación de APK e IPA</li>
+            <li><strong>🛠️ Mayor estabilidad:</strong> Optimizaciones de rendimiento</li>
+            <li><strong>🔌 Store de APIs:</strong> Integraciones pre-configuradas</li>
+            <li><strong>👥 Colaboración en equipo:</strong> Trabajo colaborativo en proyectos</li>
+          </ul>
+          <p className="mt-2 text-sm text-purple-600 dark:text-purple-400">🚀 Las funciones se lanzarán progresivamente. ¡Mantente atento a las actualizaciones!</p>
         </div>
       )
     },

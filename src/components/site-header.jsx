@@ -8,12 +8,16 @@ import { SidebarTrigger } from "@/components/ui/sidebar"
 import { useTitle } from "@/contexts/TitleContext"
 import { useTheme } from "@/contexts/ThemeContext"
 import { SearchOverlay } from "@/components/search-overlay"
+import { AiChat } from "@/components/ai-chat"
+import Image from "next/image"
+import { Sparkles } from "lucide-react"
 
 export function SiteHeader() {
   const { currentTitle, updateTitle } = useTitle()
   const { isDarkMode, toggleTheme } = useTheme()
   const pathname = usePathname()
   const [isSearchOpen, setIsSearchOpen] = useState(false)
+  const [isChatOpen, setIsChatOpen] = useState(false)
 
   // Global keyboard shortcut for search
   useEffect(() => {
@@ -69,32 +73,43 @@ export function SiteHeader() {
           {/* Center - Search bar (Desktop only) */}
           <div className="flex-1 max-w-md mx-4 hidden md:block">
             <div className="relative">
-              <button
-                onClick={() => setIsSearchOpen(true)}
-                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-left flex items-center"
-              >
-                <span className="text-gray-500 dark:text-gray-400">Buscar documentación...</span>
-                <kbd className="ml-auto text-xs bg-gray-100 dark:bg-gray-700 px-1.5 py-0.5 rounded border hidden lg:inline">⌘K</kbd>
-              </button>
-              <svg
-                className="absolute right-12 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                />
-              </svg>
+              <div className="flex items-center space-x-2">
+                <button
+                  onClick={() => setIsSearchOpen(true)}
+                  className="flex-1 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-left flex items-center"
+                >
+                  <svg
+                    className="w-4 h-4 text-gray-400 mr-3"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                    />
+                  </svg>
+                  <span className="text-gray-500 dark:text-gray-400">Buscar documentación...</span>
+                  <kbd className="ml-auto text-xs bg-gray-100 dark:bg-gray-700 px-1.5 py-0.5 rounded border hidden lg:inline">⌘K</kbd>
+                </button>
+                
+                <button
+                  onClick={() => setIsChatOpen(true)}
+                  className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-900 text-gray-900 dark:text-white flex items-center space-x-2 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+                  title="Chat con IA"
+                >
+                  <Sparkles className="w-4 h-4 text-gray-400" />
+                  <span className="text-sm font-medium text-gray-500 dark:text-gray-400 hidden lg:inline">IA</span>
+                </button>
+              </div>
             </div>
           </div>
           
           {/* Right side - Search and Theme toggle */}
           <div className="flex items-center gap-2">
-            {/* Mobile search icon */}
+            {/* Mobile search and AI chat icons */}
             <button
               onClick={() => setIsSearchOpen(!isSearchOpen)}
               className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors md:hidden"
@@ -112,6 +127,29 @@ export function SiteHeader() {
                   d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                 />
               </svg>
+            </button>
+            
+            <button
+              onClick={() => setIsChatOpen(!isChatOpen)}
+              className="p-2 rounded-lg hover:bg-purple-100 dark:hover:bg-purple-900/20 transition-colors md:hidden relative group"
+              title="Chat con IA"
+            >
+              <div className="relative">
+                <svg
+                  className="w-5 h-5 text-purple-600 dark:text-purple-400 group-hover:text-purple-700 dark:group-hover:text-purple-300"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.847a4.5 4.5 0 003.09 3.09L15.75 12l-2.847.813a4.5 4.5 0 00-3.09 3.091z"
+                  />
+                </svg>
+                <div className="absolute -top-0.5 -right-0.5 w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+              </div>
             </button>
             
             {/* Theme toggle */}
@@ -233,6 +271,12 @@ export function SiteHeader() {
       <SearchOverlay 
         isOpen={isSearchOpen} 
         onClose={() => setIsSearchOpen(false)} 
+      />
+      
+      {/* AI Chat */}
+      <AiChat 
+        isOpen={isChatOpen} 
+        onClose={() => setIsChatOpen(false)} 
       />
     </>
   );
