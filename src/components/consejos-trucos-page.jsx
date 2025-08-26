@@ -162,7 +162,7 @@ export function ConsejosTrucosPage() {
               </p>
               <div className="bg-gray-50 dark:bg-gray-800 rounded p-3 text-sm font-mono text-black dark:text-gray-300">
                 <p>• <strong>Plan básico:</strong> Prompts concisos y específicos. Una instrucción clara por vez.</p>
-                <p>• <strong>Plan alto:</strong> Flujo completo - Jarvis planifica → Nerd ejecuta → Flhas depura.</p>
+                <p>• <strong>Plan alto:</strong> Flujo completo - Jarvis planifica → Nerd ejecuta → Flash depura.</p>
               </div>
             </div>
 
@@ -206,7 +206,7 @@ export function ConsejosTrucosPage() {
               <div className="bg-gray-50 dark:bg-gray-800 rounded p-3 text-sm font-mono text-black dark:text-gray-300">
                 <p>• <strong>Jarvis:</strong> Arquitectura, features complejas, refactorización mayor</p>
                 <p>• <strong>Nerd:</strong> Implementación, ajustes, features incrementales</p>
-                <p>• <strong>Flhas:</strong> Debugging, optimización, resolución de errores</p>
+                <p>• <strong>Flash:</strong> Debugging, optimización, resolución de errores</p>
               </div>
             </div>
 
@@ -220,7 +220,7 @@ export function ConsejosTrucosPage() {
             <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
               <h3 className="font-semibold text-black dark:text-white mb-2">3. Estrategia específica para Game Development</h3>
               <p className="text-sm text-black dark:text-gray-300">
-                Los juegos requieren arquitectura compleja desde el inicio. Jarvis diseña el motor y sistemas centrales, mientras Flhas optimiza performance y elimina bugs críticos que pueden arruinar la experiencia del jugador.
+                Los juegos requieren arquitectura compleja desde el inicio. Jarvis diseña el motor y sistemas centrales, mientras Flash optimiza performance y elimina bugs críticos que pueden arruinar la experiencia del jugador.
               </p>
             </div>
 
@@ -284,7 +284,7 @@ export function ConsejosTrucosPage() {
                 <p>• <strong>Content generation:</strong> Blogs, newsletters, documentación técnica</p>
                 <p>• <strong>Business tools:</strong> Calculadoras, generadores de presupuestos</p>
                 <p>• <strong>Automation:</strong> Dashboards de reportes, integraciones API</p>
-                <p>• <strong>Flhas como comodín:</strong> Cuando otros modelos no funcionan, Flhas often puede encontrar la solución</p>
+                <p>• <strong>Flash como comodín:</strong> Cuando otros modelos no funcionan, Flash often puede encontrar la solución</p>
               </div>
             </div>
 
