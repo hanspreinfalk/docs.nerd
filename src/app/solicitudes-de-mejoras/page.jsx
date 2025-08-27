@@ -564,8 +564,8 @@ function SolicitudesDeMejorasPage() {
                     onClick={(e) => handleLike(selectedPost._id, e)}
                     className={`flex items-center space-x-2 transition-colors px-3 py-2 rounded-lg ${
                       hasLiked(selectedPost._id)
-                        ? 'text-red-700 bg-red-100 dark:bg-red-800 cursor-not-allowed opacity-70'
-                        : 'text-red-500 hover:text-red-600 bg-red-50 dark:bg-red-900/20'
+                        ? 'text-red-700 bg-red-100 dark:bg-red-200 cursor-not-allowed opacity-70'
+                        : 'text-red-500 hover:text-red-600 bg-red-50 dark:bg-red-50'
                     }`}
                     disabled={hasLiked(selectedPost._id)}
                   >
