@@ -65,10 +65,10 @@ export function SiteHeader() {
         className="flex h-16 shrink-0 items-center gap-2 border-b border-gray-100 dark:border-gray-800 transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-16 fixed top-0 left-0 right-0 z-50 bg-white dark:bg-black">
         <div className="flex w-full items-center justify-between px-4 lg:px-6">
           {/* Left side - Logo and title */}
-          <div className="flex items-center gap-3">
-            <img src="/lentes.svg" alt="Lentes" className="size-10" />
+          <a href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+            <img src="/lentes.svg" alt="Lentes" className="size-10"/>
             <span className="text-xl font-bold text-gray-900 dark:text-white">Nerd.lat</span>
-          </div>
+          </a>
           
           {/* Center - Search bar (Desktop only) */}
           <div className="flex-1 max-w-md mx-4 hidden md:block">

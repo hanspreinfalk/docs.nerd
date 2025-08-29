@@ -142,6 +142,33 @@ export function CasosDeUsoPage() {
           </div>
         </div>
 
+        <div className="w-full max-w-3xl mt-6 px-4 lg:px-6">
+          <h2 className="text-lg font-semibold text-black dark:text-white mb-4">
+            Páginas Web para Comunidades
+          </h2>
+          
+          <div className="space-y-4">
+            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
+              <div className="space-y-4">
+                <div className="border-l-4 border-green-500 pl-4">
+                  <h3 className="font-semibold text-black dark:text-white">
+                    <a 
+                      href="https://chatcerex.com/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 underline"
+                    >
+                      ChatCerex
+                    </a>
+                  </h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">Sitio web para la comunidad agrícola.
+                  Conecta, comunica y colabora, creado en Nerd.lat.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* <div className="w-full max-w-3xl mt-6 px-4 lg:px-6">
           <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
             <p className="text-sm text-gray-700 dark:text-gray-300">
