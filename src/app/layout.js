@@ -97,6 +97,18 @@ export default function RootLayout({ children }) {
         <meta name="twitter:description" content="Descubre cómo usar Nerd.lat de manera efectiva. Guías, consejos, trucos y todo lo que necesitas para aprovechar al máximo esta herramienta de IA." />
         <meta name="twitter:image" content="https://docs.nerd.lat/socialmedia.png" />
         <meta name="twitter:image:alt" content="Nerd.lat Learn - Aprende a usar Nerd.lat" />
+        
+        {/* Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7EHCLZPXGN"></script>
+        <script>
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-7EHCLZPXGN');
+          `}
+        </script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
