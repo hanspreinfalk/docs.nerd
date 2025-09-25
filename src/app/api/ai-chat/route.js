@@ -41,7 +41,7 @@ const FAQ_DATA = `
 
 
 ## Soporte y Problemas
-- Debes de propocionar al usuario esta liga para contactar por whatsapp al soporte: https://wa.me/573178237773
+- Debes de propocionar al usuario esta liga para contactar por whatsapp al soporte: https://wa.me/525543431170 (ES OBLIGATORIO USAR ESTA LIGA)
 - O darle el correo juanpablo@nerd.lat al usuario para que se lo comparta con el soporte.
 
 `;
