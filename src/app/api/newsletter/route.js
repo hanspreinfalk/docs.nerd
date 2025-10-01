@@ -30,10 +30,10 @@ export async function POST(request) {
       )
     }
 
-    // Send email to juanpablo@nerd.lat
+    // Send email to luis@nerd.lat
     const emailData = {
       from: 'noreply@nerd.lat',
-      to: 'juanpablo@nerd.lat',
+      to: 'luis@nerd.lat',
       subject: `Nuevo feedback de usuario: ${subject}`,
       html: `
         <div style="max-width: 600px; margin: 0 auto; font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
